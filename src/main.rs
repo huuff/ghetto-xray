@@ -72,7 +72,7 @@ fn Home() -> Element {
                                         }
                                     }
                                     button {
-                                        onclick: move |_| entries.write().push(use_signal(|| EntryData::default())),
+                                        onclick: move |_| entries.write().push(Signal::new(EntryData::default())),
                                         "Add"
                                     }
                                     XRayButton { entries: entries }
