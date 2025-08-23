@@ -1,4 +1,9 @@
+mod model;
+mod xray;
+
 use dioxus::prelude::*;
+use model::EntryData;
+use xray::XRayButton;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
@@ -71,11 +76,15 @@ fn Home() -> Element {
                                             }
                                         }
                                     }
-                                    button {
-                                        onclick: move |_| entries.write().push(Signal::new(EntryData::default())),
-                                        "Add"
+                                    div {
+                                        class: "is-flex is-justify-content-space-between",
+                                        button {
+                                            class: "button is-white",
+                                            onclick: move |_| entries.write().push(Signal::new(EntryData::default())),
+                                            "Add"
+                                        }
+                                        XRayButton { entries: entries }
                                     }
-                                    XRayButton { entries: entries }
                                 }
                             }
                         }
@@ -86,80 +95,22 @@ fn Home() -> Element {
     }
 }
 
-#[derive(Default)]
-struct EntryData {
-    morningstar_id: String,
-}
-
 #[component]
 fn Entry(data: Signal<EntryData>) -> Element {
-    //
-
     rsx! {
         tr {
             td {
                 input {
+                    class: "input",
+                    maxlength: 10,
+                    style: "width: 10ch;",
                     value: "{data.read().morningstar_id}",
                     oninput: move |evt| {data.write().morningstar_id = evt.value()}
                  }
             }
             td {
-                 p { "{data.read().morningstar_id}" }
+                 p { "{data.read().name.as_deref().unwrap_or(\"Unknown\")}" }
             }
         }
     }
-}
-
-#[component]
-fn XRayButton(entries: Signal<Vec<Signal<EntryData>>>) -> Element {
-    let url = build_url(entries);
-
-    rsx! {
-        button {
-            onclick: move |_| {document::eval(&format!("window.open('{url}', '_blank');"));},
-            "Let's go!"
-        }
-    }
-}
-
-fn build_url(entries: Signal<Vec<Signal<EntryData>>>) -> String {
-    use itertools::Itertools as _;
-
-    struct MorningstarParam {
-        security_id: String,
-        market_value: u64,
-        type_id: String,
-    }
-
-    let params = entries
-        .read()
-        .iter()
-        .map(|entry| MorningstarParam {
-            security_id: entry.read().morningstar_id.clone(),
-            market_value: 1000,
-            type_id: "FO".into(),
-        })
-        .collect::<Vec<_>>();
-
-    let mut url = String::from(
-        "https://lt.morningstar.com/j2uwuwirpv/xraypdf/default.aspx?LanguageId=es-ES&CurrencyId=EUR",
-    );
-
-    url += &format!(
-        "&securityIds={}",
-        params.iter().map(|it| it.security_id.as_str()).join("|")
-    );
-    url += &format!(
-        "&marketValues={}",
-        params
-            .iter()
-            .map(|it| it.market_value.to_string())
-            .join("|")
-    );
-    url += &format!(
-        "&typeIds={}",
-        params.iter().map(|it| it.type_id.as_str()).join("|")
-    );
-
-    url
 }
