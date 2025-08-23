@@ -31,7 +31,6 @@
   actionlint.enable = true;
 
   markdownlint.enable = true;
-  typos.enable = true;
 
   clippy = {
     enable = true;

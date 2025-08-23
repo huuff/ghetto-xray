@@ -123,6 +123,8 @@ fn XRayButton(entries: Signal<Vec<Signal<EntryData>>>) -> Element {
 }
 
 fn build_url(entries: Signal<Vec<Signal<EntryData>>>) -> String {
+    use itertools::Itertools as _;
+
     struct MorningstarParam {
         security_id: String,
         market_value: u64,
@@ -143,23 +145,21 @@ fn build_url(entries: Signal<Vec<Signal<EntryData>>>) -> String {
         "https://lt.morningstar.com/j2uwuwirpv/xraypdf/default.aspx?LanguageId=es-ES&CurrencyId=EUR",
     );
 
-    url += "&securityIds=";
-    for param in &params {
-        url += &param.security_id;
-        url += "|";
-    }
-
-    url += "&marketValues=";
-    for param in &params {
-        url += &param.market_value.to_string();
-        url += "|";
-    }
-
-    url += "&typeIds=";
-    for param in &params {
-        url += &param.type_id;
-        url += "|";
-    }
+    url += &format!(
+        "&securityIds={}",
+        params.iter().map(|it| it.security_id.as_str()).join("|")
+    );
+    url += &format!(
+        "&marketValues={}",
+        params
+            .iter()
+            .map(|it| it.market_value.to_string())
+            .join("|")
+    );
+    url += &format!(
+        "&typeIds={}",
+        params.iter().map(|it| it.type_id.as_str()).join("|")
+    );
 
     url
 }

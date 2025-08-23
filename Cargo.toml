@@ -8,6 +8,7 @@ edition = "2024"
 
 [dependencies]
 dioxus = { version = "0.6.0", features = ["router", "fullstack"] }
+itertools = { version = "0.14" }
 
 [features]
 default = ["web"]
