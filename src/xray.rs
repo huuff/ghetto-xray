@@ -6,8 +6,9 @@ pub fn XRayButton(entries: Signal<Vec<Signal<EntryData>>>) -> Element {
     let url = build_url(entries);
 
     rsx! {
-        button { class: "button is-primary",
-            onclick: move |_| {document::eval(&format!("window.open('{url}', '_blank');"));},
+        a { class: "button is-primary",
+            href: url,
+            target: "_blank",
             "Generate"
         }
     }
