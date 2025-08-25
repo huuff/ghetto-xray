@@ -30,8 +30,6 @@
 
   actionlint.enable = true;
 
-  markdownlint.enable = true;
-
   clippy = {
     enable = true;
     # override from rust-overlay, which is more up-to-date
