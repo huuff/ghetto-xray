@@ -9,7 +9,7 @@ corresponding Morningstar fund identifiers.
 
 ## File Structure
 
-- **Working file**: `Excel Pizarritos - General.csv` (contains Morningstar data)
+- **Working file**: `data/funds.csv` (contains Morningstar data)
 
 ## CSV Structure
 
