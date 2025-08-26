@@ -17,17 +17,12 @@ The CSV contains these columns:
 
 1. Isin
 2. Nombre del Fondo
-3. Precio Actual
-4. Rentabilidad Año en Curso (%)
-5. Categoría General
-6. Riesgo (1-7)
-7. Volatilidad
-8. Ratio Sharpe
-9. Finect
-10. Fecha de Actualización Rentabilidad
-11. Usuario
-12. **Morningstar ID** (newly added)
-13. **Morningstar URL** (newly added)
+3. Categoría General
+4. Riesgo (1-7)
+5. Volatilidad
+6. Ratio Sharpe
+7. **Morningstar ID**
+8. **Morningstar URL**
 ## Morningstar ID Search Method
 
 ### Search Strategy
@@ -81,7 +76,7 @@ Once you have a Morningstar ID, construct the full URL using these patterns:
 - **For ETFs**: `https://global.morningstar.com/en-eu/investments/etfs/{MORNINGSTAR_ID}/quote`
 - **Alternative format**: `https://www.morningstar.es/es/funds/snapshot/snapshot.aspx?id={MORNINGSTAR_ID}`
 
-The URL should be added to the "Morningstar URL" column (column 13)
+The URL should be added to the "Morningstar URL" column (column 8)
 immediately after finding and verifying the Morningstar ID.
 ## Important Notes
 
