@@ -103,7 +103,7 @@
               webkitgtk_4_1
               xdotool
 
-              playwright-mcp
+              nodejs_24
             ];
           };
       }

@@ -61,13 +61,21 @@ The following ISIN → Morningstar ID mappings have been verified:
 
 ## Search Process
 
-1. Navigate to Google search: `https://www.google.com/search?q={ISIN}+morningstar`
-2. Look for Morningstar results in search results
-3. Extract the Morningstar ID from URLs (usually in `/fondos/{ID}/` or
-   `?id={ID}` patterns)
-4. Verify the ID corresponds to the correct fund by checking fund name
-   matches
-5. Add both the Morningstar ID and the corresponding URL to the CSV
+1. Use DuckDuckGo MCP tool with query: `{ISIN} morningstar`
+2. Look for Morningstar URLs in search results
+3. Extract Morningstar ID from URLs (10-character alphanumeric codes)
+4. Verify fund name matches in results
+5. Add both the Morningstar ID and corresponding URL to the CSV
+
+**DuckDuckGo Success Examples:**
+- FR0000989626 → F0GBR04M6M (Groupama Trésorerie)
+- ES0138534054 → F00000WINH (Santander Rendimiento FI) 
+- IE00B03HD191 → F0GBR052TN (Vanguard Global Stock Index Fund)
+
+**Notes on DuckDuckGo method:**
+- May hit rate limits or bot detection after multiple searches
+- Allow cooldown time between search sessions
+- More reliable for European funds (ISIN codes starting with FR, ES, LU, IE)
 ## URL Construction
 
 Once you have a Morningstar ID, construct the full URL using these patterns:
