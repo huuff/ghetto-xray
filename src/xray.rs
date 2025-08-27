@@ -2,7 +2,7 @@ use crate::model::Portfolio;
 use dioxus::prelude::*;
 
 #[component]
-pub fn XRayButton(portfolio: Portfolio) -> Element {
+pub fn XRayButton(portfolio: Signal<Portfolio>) -> Element {
     let url = build_url(portfolio);
 
     rsx! {
@@ -10,7 +10,7 @@ pub fn XRayButton(portfolio: Portfolio) -> Element {
     }
 }
 
-fn build_url(portfolio: Portfolio) -> String {
+fn build_url(portfolio: Signal<Portfolio>) -> String {
     use itertools::Itertools as _;
 
     struct MorningstarParam {
@@ -20,8 +20,8 @@ fn build_url(portfolio: Portfolio) -> String {
     }
 
     let params = portfolio
-        .entries
         .read()
+        .entries
         .iter()
         .map(|entry| MorningstarParam {
             security_id: entry.morningstar_id.clone(),

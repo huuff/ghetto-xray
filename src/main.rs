@@ -32,7 +32,7 @@ fn App() -> Element {
 
 #[component]
 fn Home() -> Element {
-    let portfolio = Portfolio::sample();
+    let portfolio = use_signal(Portfolio::sample);
 
     rsx! {
         div { class: "container mt-5",
@@ -66,8 +66,8 @@ fn Home() -> Element {
                                             }
                                         }
                                         tbody {
-                                            for entry in (portfolio.entries)() {
-                                                Entry { entry }
+                                            for entry in portfolio().entries.iter() {
+                                                Entry { key: "{entry.morningstar_id}", entry: entry.clone() }
                                             }
                                         }
                                     }
@@ -87,14 +87,14 @@ fn Home() -> Element {
 }
 
 #[component]
-fn EntryForm(portfolio: Portfolio) -> Element {
+fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
     let mut morningstar_id = use_signal(String::default);
 
     let add_entry = move |_| {
         let id = morningstar_id.read().clone();
         *morningstar_id.write() = Default::default();
 
-        portfolio.entries.write().push(PortfolioEntry {
+        portfolio.write().entries.push(PortfolioEntry {
             morningstar_id: id.clone(),
             name: None,
         });
