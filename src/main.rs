@@ -67,7 +67,10 @@ fn Home() -> Element {
                                         }
                                         tbody {
                                             for entry in portfolio().entries.iter() {
-                                                Entry { key: "{entry.morningstar_id}", entry: entry.clone() }
+                                                Entry {
+                                                    key: "{entry.morningstar_id}",
+                                                    entry: entry.clone(),
+                                                }
                                             }
                                         }
                                     }
@@ -108,9 +111,14 @@ fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
                 r#type: "text",
                 placeholder: "Morningstar ID",
                 value: "{morningstar_id}",
-                oninput: move |evt| *morningstar_id.write() = evt.value()
+                oninput: move |evt| *morningstar_id.write() = evt.value(),
             }
-            button { class: "button is-white", r#type: "button", onclick: add_entry,"Add" }
+            button {
+                class: "button is-white",
+                r#type: "button",
+                onclick: add_entry,
+                "Add"
+            }
         }
     }
 }
