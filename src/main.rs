@@ -131,9 +131,7 @@ fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
 
 #[component]
 fn Entry(index: usize, entry: PortfolioEntry, portfolio: Signal<Portfolio>) -> Element {
-    let delete = move |_| {
-        portfolio.write().entries.remove(index);
-    };
+    let delete = move |_| portfolio.write().remove(index);
 
     rsx! {
         tr {

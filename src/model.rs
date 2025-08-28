@@ -10,6 +10,12 @@ nestify::nest! {
 }
 
 impl Portfolio {
+    pub fn remove(&mut self, index: usize) {
+        self.entries.remove(index);
+    }
+}
+
+impl Portfolio {
     pub fn sample() -> Self {
         Portfolio {
             entries: vec![
