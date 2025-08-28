@@ -2,11 +2,12 @@ use crate::model::Portfolio;
 use dioxus::prelude::*;
 
 #[component]
-pub fn XRayButton(portfolio: Signal<Portfolio>) -> Element {
+pub fn XRayButton(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
     let url = build_url(portfolio);
+    let class = format!("button is-primary {}", class.unwrap_or_default());
 
     rsx! {
-        a { class: "button is-primary", href: url, target: "_blank", "Generate" }
+        a { class, href: url, target: "_blank", "Generate" }
     }
 }
 

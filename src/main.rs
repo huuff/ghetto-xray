@@ -1,8 +1,10 @@
 mod model;
+mod ui;
 mod xray;
 
 use dioxus::prelude::*;
 use model::{Portfolio, PortfolioEntry};
+use ui::Card;
 use xray::XRayButton;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
@@ -49,12 +51,9 @@ fn Home() -> Element {
                 div { class: "container",
                     div { class: "columns is-centered",
                         div { class: "column is-10",
-                            div { class: "card",
-                                div { class: "card-header",
-                                    p { class: "card-header-title is-size-4", "Portfolio Holdings" }
-                                }
-                                div { class: "card-content",
-                                    table { class: "table is-fullwidth is-striped is-hoverable",
+                            Card {
+                                title: "Portfolio Holdings",
+                                table { class: "table is-fullwidth is-striped is-hoverable",
                                         thead {
                                             tr {
                                                 th { class: "has-text-weight-bold",
@@ -79,14 +78,13 @@ fn Home() -> Element {
                                             }
                                         }
                                     }
-                                    div { class: "is-flex is-justify-content-space-between",
+                                  div { class: "is-flex is-justify-content-space-between",
+                                    EntryForm {  portfolio }
+                                    XRayButton {  portfolio }
+                                  }
 
-                                        EntryForm { portfolio }
-                                        XRayButton { portfolio }
-                                    }
                                 }
                             }
-                        }
                     }
                 }
             }
@@ -95,7 +93,7 @@ fn Home() -> Element {
 }
 
 #[component]
-fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
+fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
     let mut morningstar_id = use_signal(String::default);
 
     let add_entry = move |_| {
@@ -108,9 +106,10 @@ fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
         });
         tracing::info!("added an entry for {id}");
     };
+    let class = format!("is-flex is-gap-2 {}", class.unwrap_or_default());
 
     rsx! {
-        div { class: "is-flex is-gap-2",
+        div { class,
             input {
                 class: "input",
                 style: "width: 150px",
@@ -120,7 +119,7 @@ fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
                 oninput: move |evt| *morningstar_id.write() = evt.value(),
             }
             button {
-                class: "button is-white",
+                class: "button is-light",
                 r#type: "button",
                 onclick: add_entry,
                 "Add"
