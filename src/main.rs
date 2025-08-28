@@ -69,7 +69,7 @@ fn Home() -> Element {
                                             }
                                         }
                                         tbody {
-                                            for (idx, entry) in portfolio().entries.iter().enumerate() {
+                                            for (idx , entry) in portfolio().entries.iter().enumerate() {
                                                 Entry {
                                                     key: "{entry.morningstar_id}",
                                                     index: idx,
@@ -110,8 +110,7 @@ fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
     };
 
     rsx! {
-        div {
-            class: "is-flex is-gap-2",
+        div { class: "is-flex is-gap-2",
             input {
                 class: "input",
                 style: "width: 150px",
@@ -144,13 +143,8 @@ fn Entry(index: usize, entry: PortfolioEntry, portfolio: Signal<Portfolio>) -> E
             td {
                 p { "{entry.name.as_deref().unwrap_or(\"Unknown\")}" }
             }
-            td {
-                class: "is-flex",
-                button {
-                    class: "button is-danger is-small",
-                    onclick: delete,
-                    "Delete"
-                }
+            td { class: "is-flex",
+                button { class: "button is-danger is-small", onclick: delete, "Delete" }
             }
         }
     }
