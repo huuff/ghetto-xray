@@ -106,8 +106,10 @@ fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
 
     rsx! {
         div {
+            class: "is-flex is-gap-2",
             input {
                 class: "input",
+                style: "width: 150px",
                 r#type: "text",
                 placeholder: "Morningstar ID",
                 value: "{morningstar_id}",
