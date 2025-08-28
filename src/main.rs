@@ -63,12 +63,17 @@ fn Home() -> Element {
                                                 th { class: "has-text-weight-bold",
                                                     "Name"
                                                 }
+                                                th { class: "has-text-weight-bold",
+                                                    "Actions"
+                                                }
                                             }
                                         }
                                         tbody {
-                                            for entry in portfolio().entries.iter() {
+                                            for (idx, entry) in portfolio().entries.iter().enumerate() {
                                                 Entry {
                                                     key: "{entry.morningstar_id}",
+                                                    index: idx,
+                                                    portfolio,
                                                     entry: entry.clone(),
                                                 }
                                             }
@@ -126,7 +131,11 @@ fn EntryForm(portfolio: Signal<Portfolio>) -> Element {
 }
 
 #[component]
-fn Entry(entry: PortfolioEntry) -> Element {
+fn Entry(index: usize, entry: PortfolioEntry, portfolio: Signal<Portfolio>) -> Element {
+    let delete = move |_| {
+        portfolio.write().entries.remove(index);
+    };
+
     rsx! {
         tr {
             td {
@@ -134,6 +143,14 @@ fn Entry(entry: PortfolioEntry) -> Element {
             }
             td {
                 p { "{entry.name.as_deref().unwrap_or(\"Unknown\")}" }
+            }
+            td {
+                class: "is-flex",
+                button {
+                    class: "button is-danger is-small",
+                    onclick: delete,
+                    "Delete"
+                }
             }
         }
     }
