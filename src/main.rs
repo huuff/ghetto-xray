@@ -4,7 +4,7 @@ mod xray;
 
 use dioxus::prelude::*;
 use model::{Portfolio, PortfolioEntry};
-use ui::Card;
+use ui::{Card, Hero};
 use xray::XRayButton;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
@@ -38,53 +38,42 @@ fn Home() -> Element {
 
     rsx! {
         div { class: "container mt-5",
-            div { class: "hero is-primary is-small",
-                div { class: "hero-body py-4",
-                    div { class: "container has-text-centered",
-                        h1 { class: "title is-3 mb-2", "Ghetto X-Ray" }
-                        p { class: "subtitle is-6", "Investment Portfolio Analysis" }
-                    }
-                }
+            Hero {
+                title: "Ghetto X-Ray",
+                subtitle: "Investment Portfolio Analysis",
             }
 
             section { class: "section",
                 div { class: "container",
                     div { class: "columns is-centered",
                         div { class: "column is-10",
-                            Card {
-                                title: "Portfolio Holdings",
+                            Card { title: "Portfolio Holdings",
                                 table { class: "table is-fullwidth is-striped is-hoverable",
-                                        thead {
-                                            tr {
-                                                th { class: "has-text-weight-bold",
-                                                    "Morningstar ID"
-                                                }
-                                                th { class: "has-text-weight-bold",
-                                                    "Name"
-                                                }
-                                                th { class: "has-text-weight-bold",
-                                                    "Actions"
-                                                }
-                                            }
+                                    thead {
+                                        tr {
+                                            th { class: "has-text-weight-bold", "Morningstar ID" }
+                                            th { class: "has-text-weight-bold", "Name" }
+                                            th { class: "has-text-weight-bold", "Actions" }
                                         }
-                                        tbody {
-                                            for (idx , entry) in portfolio().entries.iter().enumerate() {
-                                                Entry {
-                                                    key: "{entry.morningstar_id}",
-                                                    index: idx,
-                                                    portfolio,
-                                                    entry: entry.clone(),
-                                                }
+                                    }
+                                    tbody {
+                                        for (idx , entry) in portfolio().entries.iter().enumerate() {
+                                            Entry {
+                                                key: "{entry.morningstar_id}",
+                                                index: idx,
+                                                portfolio,
+                                                entry: entry.clone(),
                                             }
                                         }
                                     }
-                                  div { class: "is-flex is-justify-content-space-between",
-                                    EntryForm {  portfolio }
-                                    XRayButton {  portfolio }
-                                  }
-
                                 }
+                                div { class: "is-flex is-justify-content-space-between",
+                                    EntryForm { portfolio }
+                                    XRayButton { portfolio }
+                                }
+
                             }
+                        }
                     }
                 }
             }
