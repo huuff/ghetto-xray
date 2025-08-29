@@ -45,35 +45,31 @@ fn Home() -> Element {
 
             section { class: "section",
                 div { class: "container",
-                    div { class: "columns is-centered",
-                        div { class: "column is-10",
-                            Card { title: "Portfolio Holdings",
-                                table { class: "table is-fullwidth is-striped is-hoverable",
-                                    thead {
-                                        tr {
-                                            th { class: "has-text-weight-bold", "Morningstar ID" }
-                                            th { class: "has-text-weight-bold", "Name" }
-                                            th { class: "has-text-weight-bold", "Actions" }
-                                        }
-                                    }
-                                    tbody {
-                                        for (idx , entry) in portfolio().entries.iter().enumerate() {
-                                            Entry {
-                                                key: "{entry.morningstar_id}",
-                                                index: idx,
-                                                portfolio,
-                                                entry: entry.clone(),
-                                            }
-                                        }
+                    Card { title: "Portfolio Holdings",
+                        table { class: "table is-fullwidth is-striped is-hoverable",
+                            thead {
+                                tr {
+                                    th { class: "has-text-weight-bold", "Morningstar ID" }
+                                    th { class: "has-text-weight-bold", "Name" }
+                                    th { class: "has-text-weight-bold", "Actions" }
+                                }
+                            }
+                            tbody {
+                                for (idx , entry) in portfolio().entries.iter().enumerate() {
+                                    Entry {
+                                        key: "{entry.morningstar_id}",
+                                        index: idx,
+                                        portfolio,
+                                        entry: entry.clone(),
                                     }
                                 }
-                                div { class: "is-flex is-justify-content-space-between",
-                                    EntryForm { portfolio }
-                                    XRayButton { portfolio }
-                                }
-
                             }
                         }
+                        div { class: "is-flex is-justify-content-space-between",
+                            EntryForm { portfolio }
+                            XRayButton { portfolio }
+                        }
+
                     }
                 }
             }
