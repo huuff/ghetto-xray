@@ -1,9 +1,13 @@
+mod input;
 mod model;
+mod table;
 mod ui;
 mod xray;
 
 use dioxus::prelude::*;
-use model::{Portfolio, PortfolioEntry};
+use input::EntryInput;
+use model::Portfolio;
+use table::PortfolioTable;
 use ui::{Card, Hero};
 use xray::XRayButton;
 
@@ -45,86 +49,13 @@ fn Home() -> Element {
 
             div { class: "container",
                 Card { title: "Portfolio Holdings",
-                    table { class: "table is-fullwidth is-striped is-hoverable",
-                        thead {
-                            tr {
-                                th { class: "has-text-weight-bold", "Morningstar ID" }
-                                th { class: "has-text-weight-bold", "Name" }
-                                th { class: "has-text-weight-bold", "Actions" }
-                            }
-                        }
-                        tbody {
-                            for (idx , entry) in portfolio().entries.iter().enumerate() {
-                                Entry {
-                                    key: "{entry.morningstar_id}",
-                                    index: idx,
-                                    portfolio,
-                                    entry: entry.clone(),
-                                }
-                            }
-                        }
-                    }
+                    PortfolioTable { portfolio }
                     div { class: "is-flex is-justify-content-space-between",
-                        EntryForm { portfolio }
+                        EntryInput { portfolio }
                         XRayButton { portfolio }
                     }
 
                 }
-            }
-        }
-    }
-}
-
-#[component]
-fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
-    let mut morningstar_id = use_signal(String::default);
-
-    let add_entry = move |_| {
-        let id = morningstar_id.read().clone();
-        *morningstar_id.write() = Default::default();
-
-        portfolio.write().entries.push(PortfolioEntry {
-            morningstar_id: id.clone(),
-            name: None,
-        });
-        tracing::info!("added an entry for {id}");
-    };
-    let class = format!("is-flex is-gap-2 {}", class.unwrap_or_default());
-
-    rsx! {
-        div { class,
-            input {
-                class: "input",
-                style: "width: 150px",
-                r#type: "text",
-                placeholder: "Morningstar ID",
-                value: "{morningstar_id}",
-                oninput: move |evt| *morningstar_id.write() = evt.value(),
-            }
-            button {
-                class: "button is-light",
-                r#type: "button",
-                onclick: add_entry,
-                "Add"
-            }
-        }
-    }
-}
-
-#[component]
-fn Entry(index: usize, entry: PortfolioEntry, portfolio: Signal<Portfolio>) -> Element {
-    let delete = move |_| portfolio.write().remove(index);
-
-    rsx! {
-        tr {
-            td {
-                span { class: "tag is-white", "{entry.morningstar_id}" }
-            }
-            td {
-                p { "{entry.name.as_deref().unwrap_or(\"Unknown\")}" }
-            }
-            td { class: "is-flex",
-                button { class: "button is-danger is-small", onclick: delete, "Delete" }
             }
         }
     }
