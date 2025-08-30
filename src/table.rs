@@ -5,15 +5,19 @@ use crate::model::{Portfolio, PortfolioEntry};
 #[component]
 pub fn PortfolioTable(portfolio: Signal<Portfolio>) -> Element {
     rsx! {
-        table { class: "table is-fullwidth is-striped is-hoverable",
-            thead {
-                tr {
-                    th { class: "has-text-weight-bold", "Morningstar ID" }
-                    th { class: "has-text-weight-bold", "Name" }
-                    th { class: "has-text-weight-bold", "Actions" }
+        div { class: "portfolio-grid",
+                p {
+                    class: "has-text-weight-bold is-hidden-mobile",
+                    "Morningstar ID"
                 }
-            }
-            tbody {
+                p {
+                    class: "has-text-weight-bold is-hidden-mobile",
+                    "Name"
+                }
+                p {
+                    class: "has-text-weight-bold is-hidden-mobile",
+                    "Actions"
+                }
                 for (idx , entry) in portfolio().entries.iter().enumerate() {
                     TableEntry {
                         key: "{entry.morningstar_id}",
@@ -22,7 +26,6 @@ pub fn PortfolioTable(portfolio: Signal<Portfolio>) -> Element {
                         entry: entry.clone(),
                     }
                 }
-            }
         }
     }
 }
@@ -32,16 +35,29 @@ fn TableEntry(index: usize, entry: PortfolioEntry, portfolio: Signal<Portfolio>)
     let delete = move |_| portfolio.write().remove(index);
 
     rsx! {
-        tr {
-            td {
-                span { class: "tag is-white", "{entry.morningstar_id}" }
+        div {
+            class: "is-flex is-align-items-center",
+            span {
+                class: "is-hidden-tablet has-text-weight-bold pr-3",
+                "Morningstar ID:"
             }
-            td {
-                p { "{entry.name.as_deref().unwrap_or(\"Unknown\")}" }
+            span { class: "tag is-white", "{entry.morningstar_id}" }
+        }
+        div {
+            class: "is-flex is-align-items-center",
+            span {
+                class: "is-hidden-tablet has-text-weight-bold pr-3",
+                "Name:"
             }
-            td { class: "is-flex",
-                button { class: "button is-danger is-small", onclick: delete, "Delete" }
+            p { "{entry.name.as_deref().unwrap_or(\"Unknown\")}" }
+        }
+        div {
+            class: "is-flex is-align-items-center",
+            span {
+                class: "is-hidden-tablet pr-3 has-text-weight-bold",
+                "Actions:"
             }
+            button { class: "button is-danger is-small", onclick: delete, "Delete" }
         }
     }
 }

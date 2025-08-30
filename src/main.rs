@@ -19,6 +19,7 @@ enum Route {
 }
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
+const STYLES: Asset = asset!("/assets/styles.css");
 
 fn main() {
     dioxus::launch(App);
@@ -28,10 +29,10 @@ fn main() {
 fn App() -> Element {
     rsx! {
         document::Link { rel: "icon", href: FAVICON }
-        document::Link {
-            rel: "stylesheet",
+        document::Stylesheet {
             href: "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css",
         }
+        document::Stylesheet { href: STYLES }
         Router::<Route> {}
     }
 }
@@ -47,14 +48,13 @@ fn Home() -> Element {
                 subtitle: "Investment Portfolio Analysis",
             }
 
-            div { class: "container",
+            div {
                 Card { title: "Portfolio Holdings",
                     PortfolioTable { portfolio }
                     div { class: "is-flex is-justify-content-space-between",
                         EntryInput { portfolio }
                         XRayButton { portfolio }
                     }
-
                 }
             }
         }
