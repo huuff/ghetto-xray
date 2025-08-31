@@ -26,6 +26,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
                 r#type: "text",
                 placeholder: "Morningstar ID",
                 value: "{morningstar_id}",
+                tabindex: "1",
                 oninput: move |evt| *morningstar_id.write() = evt.value(),
             }
             button {
