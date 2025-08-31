@@ -29,9 +29,7 @@ fn main() {
 fn App() -> Element {
     rsx! {
         document::Link { rel: "icon", href: FAVICON }
-        document::Stylesheet {
-            href: "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css",
-        }
+        document::Stylesheet { href: "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" }
         document::Stylesheet { href: STYLES }
         Router::<Route> {}
     }

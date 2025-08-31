@@ -16,7 +16,7 @@ fn build_url(portfolio: Signal<Portfolio>) -> String {
 
     struct MorningstarParam {
         security_id: String,
-        market_value: u64,
+        market_value: String,
         type_id: String,
     }
 
@@ -26,7 +26,14 @@ fn build_url(portfolio: Signal<Portfolio>) -> String {
         .iter()
         .map(|entry| MorningstarParam {
             security_id: entry.morningstar_id.clone(),
-            market_value: 1000,
+            market_value: if portfolio.read().distribute_evenly {
+                "1000".into()
+            } else {
+                entry
+                    .market_value
+                    .clone()
+                    .expect("not distributed evenly, but missing value for an entry")
+            },
             type_id: "FO".into(),
         })
         .collect::<Vec<_>>();
