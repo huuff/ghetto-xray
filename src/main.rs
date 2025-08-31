@@ -1,11 +1,11 @@
-mod input;
+mod form;
 mod model;
 mod table;
 mod ui;
 mod xray;
 
 use dioxus::prelude::*;
-use input::EntryInput;
+use form::EntryForm;
 use model::Portfolio;
 use table::PortfolioTable;
 use ui::{Card, Hero};
@@ -52,7 +52,7 @@ fn Home() -> Element {
                 Card { title: "Portfolio Holdings",
                     PortfolioTable { portfolio }
                     div { class: "is-flex is-justify-content-space-between",
-                        EntryInput { portfolio }
+                        EntryForm { portfolio }
                         XRayButton { portfolio }
                     }
                 }

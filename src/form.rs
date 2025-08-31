@@ -2,7 +2,7 @@ use crate::model::{Portfolio, PortfolioEntry};
 use dioxus::prelude::*;
 
 #[component]
-pub fn EntryInput(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
+pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
     let mut morningstar_id = use_signal(String::default);
 
     let add_entry = move |_| {
@@ -18,7 +18,8 @@ pub fn EntryInput(portfolio: Signal<Portfolio>, class: Option<String>) -> Elemen
     let class = format!("is-flex is-gap-2 {}", class.unwrap_or_default());
 
     rsx! {
-        div { class,
+        form { class,
+            onsubmit: add_entry,
             input {
                 class: "input",
                 style: "width: 150px",
@@ -29,8 +30,7 @@ pub fn EntryInput(portfolio: Signal<Portfolio>, class: Option<String>) -> Elemen
             }
             button {
                 class: "button is-light",
-                r#type: "button",
-                onclick: add_entry,
+                r#type: "submit",
                 "Add"
             }
         }
