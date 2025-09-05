@@ -15,9 +15,14 @@ pub fn Securities() -> Element {
 
     rsx! {
         Modal { title: "Securities", is_open: context.is_open,
-            ul {
+            ul { class: "panel",
                 for security in &*SECURITIES {
-                    li { "{security.name}" }
+                    li { class: "panel-block",
+                        div { class: "flex is-flex-direction-colum",
+                            p { class: "pb-2 has-text-weight-medium", "{security.name}" }
+                            p { class: "tag is-white", "{security.isin}" }
+                        }
+                    }
                 }
             }
         }

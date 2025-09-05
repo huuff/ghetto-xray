@@ -55,10 +55,9 @@ fn Home() -> Element {
                 Card { title: "Portfolio Holdings",
                     PortfolioTable { portfolio }
                     div { class: "is-flex is-justify-content-space-between",
-                        div {
-                            class: "is-flex is-gap-2",
+                        div { class: "is-flex is-gap-2",
                             EntryForm { portfolio }
-                            OpenSecurities {  }
+                            OpenSecurities {}
                         }
                         XRayButton { portfolio }
 
