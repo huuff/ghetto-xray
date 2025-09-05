@@ -11,6 +11,14 @@ nestify::nest! {
     }
 }
 
+#[derive(serde::Deserialize)]
+#[expect(dead_code, reason = "not finished yet")]
+pub struct Security {
+    pub isin: String,
+    pub name: String,
+    pub morninsgstar_id: String,
+}
+
 impl Portfolio {
     pub fn remove(&mut self, index: usize) {
         self.entries.remove(index);

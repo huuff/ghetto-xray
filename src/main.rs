@@ -1,15 +1,12 @@
 mod form;
 mod model;
+mod securities;
 mod table;
 mod ui;
 mod xray;
 
 use dioxus::prelude::*;
-use form::EntryForm;
 use model::Portfolio;
-use table::PortfolioTable;
-use ui::{Card, Hero};
-use xray::XRayButton;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
@@ -37,7 +34,15 @@ fn App() -> Element {
 
 #[component]
 fn Home() -> Element {
+    use crate::ui::{Card, Hero};
+    use form::EntryForm;
+    use securities::{Securities, SecuritiesContext};
+    use table::PortfolioTable;
+    use xray::XRayButton;
+
     let portfolio = use_signal(Portfolio::sample);
+
+    SecuritiesContext::provide_context();
 
     rsx! {
         div { class: "container mt-5",
@@ -50,11 +55,29 @@ fn Home() -> Element {
                 Card { title: "Portfolio Holdings",
                     PortfolioTable { portfolio }
                     div { class: "is-flex is-justify-content-space-between",
-                        EntryForm { portfolio }
+                        div {
+                            class: "is-flex is-gap-2",
+                            EntryForm { portfolio }
+                            OpenSecurities {  }
+                        }
                         XRayButton { portfolio }
+
                     }
                 }
             }
+
+            Securities {}
         }
+    }
+}
+
+#[component]
+fn OpenSecurities() -> Element {
+    use crate::securities::SecuritiesContext;
+
+    let mut ctx = SecuritiesContext::use_context();
+
+    rsx! {
+        button { class: "button", onclick: move |_| ctx.toggle(), "Sec" }
     }
 }

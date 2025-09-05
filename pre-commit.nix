@@ -1,7 +1,8 @@
 {
   pkgs,
   treefmt,
-  rustPkgs,
+  #rustPkgs,
+  ...
 }:
 
 {
@@ -30,16 +31,17 @@
 
   actionlint.enable = true;
 
-  clippy = {
-    enable = true;
-    # override from rust-overlay, which is more up-to-date
-    packageOverrides = {
-      clippy = rustPkgs;
-      cargo = rustPkgs;
-    };
-    settings = {
-      allFeatures = true;
-    };
-  };
+  # TODO: it's broken for reasons I know very well
+  #clippy = {
+  #enable = true;
+  ## override from rust-overlay, which is more up-to-date
+  #packageOverrides = {
+  #clippy = rustPkgs;
+  #cargo = rustPkgs;
+  #};
+  #settings = {
+  #allFeatures = true;
+  #};
+  #};
 
 }
