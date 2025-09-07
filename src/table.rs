@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use crate::model::Portfolio;
+use crate::{model::Portfolio, ui::Icon};
 
 #[component]
 pub fn PortfolioTable(portfolio: Signal<Portfolio>) -> Element {
@@ -14,7 +14,7 @@ pub fn PortfolioTable(portfolio: Signal<Portfolio>) -> Element {
                 button {
                     class: "button is-small",
                     onclick: move |_| portfolio.write().distribute_evenly(),
-                    "="
+                    Icon { class: "fa-solid fa-equals" }
                 }
             }
             p { class: "has-text-weight-bold is-hidden-mobile", "Actions" }
@@ -54,7 +54,7 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
         }
         div { class: "is-flex is-align-items-center",
             span { class: "is-hidden-tablet pr-3 has-text-weight-bold", "Actions:" }
-            button { class: "button is-danger is-small", onclick: delete, "Delete" }
+            button { class: "button is-danger is-small", onclick: delete, Icon { class: "fa-solid fa-trash" } }
         }
     }
 }

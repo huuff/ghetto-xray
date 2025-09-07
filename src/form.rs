@@ -1,6 +1,7 @@
 use crate::{
     constants::DEFAULT_MARKET_VALUE,
     model::{Portfolio, PortfolioEntry},
+    ui::Icon,
 };
 use dioxus::prelude::*;
 
@@ -45,7 +46,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
                 tabindex: "2",
                 oninput: move |evt| *market_value.write() = evt.value(),
             }
-            button { class: "button is-light", r#type: "submit", "Add" }
+            button { class: "button is-light", r#type: "submit", Icon { class: "fa-solid fa-plus" } }
         }
     }
 }

@@ -1,4 +1,7 @@
-use crate::model::{Portfolio, Security};
+use crate::{
+    model::{Portfolio, Security},
+    ui::Icon,
+};
 use dioxus::prelude::*;
 use std::sync::LazyLock;
 
@@ -18,12 +21,12 @@ pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Elemen
                     li { class: "panel-block",
                         div { class: "is-flex is-flex-direction-row",
                             button {
-                                class: "button mr-2",
+                                class: "button mr-3",
                                 onclick: move |_| portfolio.write().add(security.clone().into()),
-                                "Add"
+                                Icon { class: "fa-solid fa-plus" }
                             }
                             div { class: "is-flex is-flex-direction-column is-align-items-start",
-                                p { class: "pb-2 pl-2 has-text-weight-medium", "{security.name}" }
+                                p { class: "pb-2 has-text-weight-medium", "{security.name}" }
                                 p { class: "tag is-white", "{security.isin}" }
                             }
                         }
