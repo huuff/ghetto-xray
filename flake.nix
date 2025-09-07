@@ -19,6 +19,11 @@
       url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
     };
+    dioxus = {
+      url = "github:DioxusLabs/dioxus";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
+    };
   };
 
   outputs =
@@ -30,6 +35,7 @@
       treefmt,
       pre-commit,
       nix-checks,
+      dioxus,
       ...
     }:
     utils.lib.eachDefaultSystem (
@@ -68,6 +74,10 @@
 
         formatter = treefmt-build.wrapper;
 
+        packages = {
+          wasm-bindgen-cli_0_2_101 = pkgs.callPackage ./nix/wasm-bindgen-cli.nix { };
+        };
+
         devShells.default =
           with pkgs;
           mkShell {
@@ -84,8 +94,8 @@
               rustPkgs
 
               wasm-pack # to test wasm
-              dioxus-cli
-              wasm-bindgen-cli_0_2_100
+              dioxus.packages.${system}.dioxus-cli
+              self.packages.${system}.wasm-bindgen-cli_0_2_101
 
               # TODO: I copied these off dioxus' official
               # repository flake, and rust-analyzer seems
@@ -102,6 +112,7 @@
               libsoup_3
               webkitgtk_4_1
               xdotool
+              binaryen
 
               nodejs_24
             ];
