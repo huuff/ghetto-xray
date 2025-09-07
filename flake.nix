@@ -19,6 +19,11 @@
       url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
     };
+    dioxus = {
+      url = "github:DioxusLabs/dioxus";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
+    };
   };
 
   outputs =
@@ -30,6 +35,7 @@
       treefmt,
       pre-commit,
       nix-checks,
+      dioxus,
       ...
     }:
     utils.lib.eachDefaultSystem (
@@ -84,7 +90,7 @@
               rustPkgs
 
               wasm-pack # to test wasm
-              dioxus-cli
+              dioxus.packages.${system}.dioxus-cli
               wasm-bindgen-cli_0_2_100
 
               # TODO: I copied these off dioxus' official
@@ -102,6 +108,7 @@
               libsoup_3
               webkitgtk_4_1
               xdotool
+              binaryen
 
               nodejs_24
             ];
