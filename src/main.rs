@@ -37,13 +37,12 @@ fn App() -> Element {
 fn Home() -> Element {
     use crate::ui::{Card, Hero};
     use form::EntryForm;
-    use securities::{Securities, SecuritiesContext};
+    use securities::Securities;
     use table::PortfolioTable;
     use xray::XRayButton;
 
     let portfolio = use_signal(Portfolio::sample);
-
-    SecuritiesContext::provide_context();
+    let is_securities_open = use_signal(|| false);
 
     rsx! {
         div { class: "container mt-5",
@@ -58,7 +57,7 @@ fn Home() -> Element {
                     div { class: "is-flex is-justify-content-space-between",
                         div { class: "is-flex is-gap-2",
                             EntryForm { portfolio }
-                            OpenSecurities {}
+                            OpenSecurities { is_open: is_securities_open }
                         }
                         XRayButton { portfolio }
 
@@ -66,18 +65,14 @@ fn Home() -> Element {
                 }
             }
 
-            Securities { portfolio }
+            Securities { portfolio, is_open: is_securities_open }
         }
     }
 }
 
 #[component]
-fn OpenSecurities() -> Element {
-    use crate::securities::SecuritiesContext;
-
-    let mut ctx = SecuritiesContext::use_context();
-
+fn OpenSecurities(is_open: Signal<bool>) -> Element {
     rsx! {
-        button { class: "button", onclick: move |_| ctx.toggle(), "Sec" }
+        button { class: "button", onclick: move |_| *is_open.write() = true, "Sec" }
     }
 }

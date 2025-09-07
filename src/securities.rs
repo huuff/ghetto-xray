@@ -8,13 +8,11 @@ pub static SECURITIES: LazyLock<Vec<Security>> = LazyLock::new(move || {
 });
 
 #[component]
-pub fn Securities(portfolio: Signal<Portfolio>) -> Element {
+pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Element {
     use crate::ui::Modal;
 
-    let context = SecuritiesContext::use_context();
-
     rsx! {
-        Modal { title: "Securities", is_open: context.is_open,
+        Modal { title: "Securities", is_open,
             ul { class: "panel",
                 for security in &*SECURITIES {
                     li { class: "panel-block",
@@ -33,25 +31,5 @@ pub fn Securities(portfolio: Signal<Portfolio>) -> Element {
                 }
             }
         }
-    }
-}
-
-#[derive(Default, Clone)]
-pub struct SecuritiesContext {
-    pub is_open: Signal<bool>,
-}
-
-impl SecuritiesContext {
-    pub fn provide_context() -> Self {
-        use_context_provider(SecuritiesContext::default)
-    }
-
-    pub fn use_context() -> Self {
-        use_context()
-    }
-
-    pub fn toggle(&mut self) {
-        let current_state = (self.is_open)();
-        *self.is_open.write() = !current_state;
     }
 }
