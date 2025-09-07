@@ -74,6 +74,10 @@
 
         formatter = treefmt-build.wrapper;
 
+        packages = {
+          wasm-bindgen-cli_0_2_101 = pkgs.callPackage ./nix/wasm-bindgen-cli.nix { };
+        };
+
         devShells.default =
           with pkgs;
           mkShell {
@@ -91,7 +95,7 @@
 
               wasm-pack # to test wasm
               dioxus.packages.${system}.dioxus-cli
-              wasm-bindgen-cli_0_2_100
+              self.packages.${system}.wasm-bindgen-cli_0_2_101
 
               # TODO: I copied these off dioxus' official
               # repository flake, and rust-analyzer seems
