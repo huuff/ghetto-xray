@@ -8,6 +8,7 @@ mod xray;
 
 use dioxus::prelude::*;
 use model::Portfolio;
+use ui::Icon;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
@@ -28,6 +29,7 @@ fn App() -> Element {
     rsx! {
         document::Link { rel: "icon", href: FAVICON }
         document::Stylesheet { href: "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" }
+        document::Stylesheet { href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" }
         document::Stylesheet { href: STYLES }
         Router::<Route> {}
     }
@@ -73,6 +75,6 @@ fn Home() -> Element {
 #[component]
 fn OpenSecurities(is_open: Signal<bool>) -> Element {
     rsx! {
-        button { class: "button", onclick: move |_| *is_open.write() = true, "Sec" }
+        button { class: "button", onclick: move |_| *is_open.write() = true, Icon { class: "fa-solid fa-bars"} }
     }
 }
