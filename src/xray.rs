@@ -26,14 +26,7 @@ fn build_url(portfolio: Signal<Portfolio>) -> String {
         .iter()
         .map(|entry| MorningstarParam {
             security_id: entry.morningstar_id.clone(),
-            market_value: if portfolio.read().distribute_evenly {
-                "1000".into()
-            } else {
-                entry
-                    .market_value
-                    .clone()
-                    .expect("not distributed evenly, but missing value for an entry")
-            },
+            market_value: entry.market_value.clone(),
             type_id: "FO".into(),
         })
         .collect::<Vec<_>>();

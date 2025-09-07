@@ -16,7 +16,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
         portfolio.write().entries.push(PortfolioEntry {
             morningstar_id: id.clone(),
             name: None,
-            market_value: (!market_value().is_empty()).then_some(market_value()),
+            market_value: market_value.read().clone(),
         });
         tracing::info!("added an entry for {id}");
     };
@@ -37,8 +37,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
             input {
                 class: "input",
                 style: "width: 100px",
-                required: !portfolio().distribute_evenly,
-                disabled: portfolio().distribute_evenly,
+                required: true,
                 r#type: "number",
                 step: "0.01",
                 placeholder: "Value",
