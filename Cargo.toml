@@ -8,7 +8,7 @@ edition = "2024"
 
 [dependencies]
 anyhow = { version = "1.0" }
-dioxus = { version = "0.6.0", features = ["router", "fullstack"] }
+dioxus = { version = "0.6.0", features = ["router"] }
 itertools = { version = "0.14" }
 nestify = { version = "0.3" }
 serde = { version = "1.0", features = ["derive"] }
@@ -31,8 +31,9 @@ mobile = ["dioxus/mobile"]
 inherits = "dev"
 opt-level = 1
 
-[profile.server-dev]
-inherits = "dev"
 
 [profile.android-dev]
+inherits = "dev"
+
+[profile.server-dev]
 inherits = "dev"
