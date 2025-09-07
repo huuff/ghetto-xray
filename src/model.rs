@@ -1,3 +1,5 @@
+use crate::constants::DEFAULT_MARKET_VALUE;
+
 nestify::nest! {
     #[derive(Default, Clone, PartialEq)]
     pub struct Portfolio {
@@ -11,8 +13,7 @@ nestify::nest! {
     }
 }
 
-#[derive(serde::Deserialize)]
-#[expect(dead_code, reason = "not finished yet")]
+#[derive(serde::Deserialize, Clone)]
 pub struct Security {
     pub isin: String,
     pub name: String,
@@ -22,6 +23,10 @@ pub struct Security {
 impl Portfolio {
     pub fn remove(&mut self, index: usize) {
         self.entries.remove(index);
+    }
+
+    pub fn add(&mut self, entry: PortfolioEntry) {
+        self.entries.push(entry);
     }
 }
 
@@ -46,6 +51,16 @@ impl Portfolio {
                     market_value: Some("7000".into()),
                 },
             ],
+        }
+    }
+}
+
+impl From<Security> for PortfolioEntry {
+    fn from(value: Security) -> Self {
+        Self {
+            morningstar_id: value.morninsgstar_id,
+            name: Some(value.name),
+            market_value: Some(DEFAULT_MARKET_VALUE.to_owned()),
         }
     }
 }

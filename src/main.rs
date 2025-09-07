@@ -1,3 +1,4 @@
+mod constants;
 mod form;
 mod model;
 mod securities;
@@ -65,7 +66,7 @@ fn Home() -> Element {
                 }
             }
 
-            Securities {}
+            Securities { portfolio }
         }
     }
 }

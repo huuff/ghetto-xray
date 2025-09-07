@@ -1,10 +1,13 @@
-use crate::model::{Portfolio, PortfolioEntry};
+use crate::{
+    constants::DEFAULT_MARKET_VALUE,
+    model::{Portfolio, PortfolioEntry},
+};
 use dioxus::prelude::*;
 
 #[component]
 pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
     let mut morningstar_id = use_signal(String::default);
-    let mut market_value = use_signal(String::default);
+    let mut market_value = use_signal(|| String::from(DEFAULT_MARKET_VALUE));
 
     let add_entry = move |_| {
         let id = morningstar_id.read().clone();
