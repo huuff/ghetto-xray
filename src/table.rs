@@ -47,7 +47,10 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
         }
         div { class: "is-flex is-align-items-center",
             span { class: "is-hidden-tablet has-text-weight-bold pr-3", "Value:" }
-            input { oninput: move |evt| set_value(evt.value()) ,value: "{entry().market_value}" }
+            input {
+                oninput: move |evt| set_value(evt.value()),
+                value: "{entry().market_value}",
+            }
         }
         div { class: "is-flex is-align-items-center",
             span { class: "is-hidden-tablet pr-3 has-text-weight-bold", "Actions:" }
