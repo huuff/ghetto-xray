@@ -1,3 +1,7 @@
+html {
+  background-color: #fafafa !important;
+}
+
 @media (max-width: 767px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
