@@ -27,7 +27,7 @@ pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Elemen
                             }
                             div { class: "is-flex is-flex-direction-column is-align-items-start",
                                 p { class: "pb-2 has-text-weight-medium", "{security.name}" }
-                                p { class: "tag is-white", "{security.isin}" }
+                                p { class: "tag is-light", "{security.isin}" }
                             }
                         }
                     }
