@@ -47,7 +47,7 @@ fn Home() -> Element {
     let is_securities_open = use_signal(|| false);
 
     rsx! {
-        div { class: "container mt-5",
+        div { class: "container mt-5 theme-light",
             Hero {
                 title: "Ghetto X-Ray",
                 subtitle: "Investment Portfolio Analysis",

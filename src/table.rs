@@ -39,7 +39,7 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
     rsx! {
         div { class: "is-flex is-align-items-center",
             span { class: "is-hidden-tablet has-text-weight-bold pr-3", "Morningstar ID:" }
-            span { class: "tag is-white", "{entry().morningstar_id}" }
+            span { class: "tag is-light", "{entry().morningstar_id}" }
         }
         div { class: "is-flex is-align-items-center",
             span { class: "is-hidden-tablet has-text-weight-bold pr-3", "Name:" }
