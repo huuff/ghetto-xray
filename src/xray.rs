@@ -7,7 +7,9 @@ pub fn XRayButton(portfolio: Signal<Portfolio>, class: Option<String>) -> Elemen
     let class = format!("button px-6 is-primary {}", class.unwrap_or_default());
 
     rsx! {
-        a { class, href: url, target: "_blank", Icon { class: "fa-solid fa-paper-plane" }}
+        a { class, href: url, target: "_blank",
+            Icon { class: "fa-solid fa-paper-plane" }
+        }
     }
 }
 

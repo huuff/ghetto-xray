@@ -20,11 +20,20 @@ pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Elemen
                 for security in &*SECURITIES {
                     li { class: "panel-block",
                         div { class: "is-flex is-flex-direction-row",
-                            button {
-                                class: "button mr-3",
-                                onclick: move |_| portfolio.write().add(security.clone().into()),
-                                Icon { class: "fa-solid fa-plus" }
+                            if portfolio().contains(&security.morningstar_id) {
+                                button {
+                                    class: "button security-left is-success is-outlined",
+                                    disabled: true,
+                                    Icon { class: "fa-solid fa-check" }
+                                }
+                            } else {
+                                button {
+                                    class: "button security-left",
+                                    onclick: move |_| portfolio.write().add(security.clone().into()),
+                                    Icon { class: "fa-solid fa-plus" }
+                                }
                             }
+
                             div { class: "is-flex is-flex-direction-column is-align-items-start",
                                 p { class: "pb-2 has-text-weight-medium", "{security.name}" }
                                 p { class: "tag is-light", "{security.isin}" }

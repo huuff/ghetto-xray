@@ -21,7 +21,7 @@ fn main() {
             securities.push(json!({
                 "isin": isin,
                 "name": name,
-                "morninsgstar_id": morningstar_id
+                "morningstar_id": morningstar_id
             }));
         }
     }

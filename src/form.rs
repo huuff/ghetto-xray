@@ -15,7 +15,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
         let id = morningstar_id.read().clone();
         *morningstar_id.write() = Default::default();
 
-        portfolio.write().entries.push(PortfolioEntry {
+        portfolio.write().add(PortfolioEntry {
             morningstar_id: id.clone(),
             name: None,
             market_value: market_value.read().clone(),
@@ -47,7 +47,9 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
                 tabindex: "2",
                 oninput: move |evt| *market_value.write() = evt.value(),
             }
-            button { class: "button is-light", r#type: "submit", Icon { class: "fa-solid fa-plus" } }
+            button { class: "button is-light", r#type: "submit",
+                Icon { class: "fa-solid fa-plus" }
+            }
         }
     }
 }

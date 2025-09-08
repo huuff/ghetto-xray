@@ -62,7 +62,6 @@ fn Home() -> Element {
                             OpenSecurities { is_open: is_securities_open }
                         }
                         XRayButton { portfolio }
-
                     }
                 }
             }
@@ -75,6 +74,8 @@ fn Home() -> Element {
 #[component]
 fn OpenSecurities(is_open: Signal<bool>) -> Element {
     rsx! {
-        button { class: "button", onclick: move |_| *is_open.write() = true, Icon { class: "fa-solid fa-bars"} }
+        button { class: "button", onclick: move |_| *is_open.write() = true,
+            Icon { class: "fa-solid fa-bars" }
+        }
     }
 }
