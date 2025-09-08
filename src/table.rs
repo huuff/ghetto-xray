@@ -54,7 +54,9 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
         }
         div { class: "is-flex is-align-items-center",
             span { class: "is-hidden-tablet pr-3 has-text-weight-bold", "Actions:" }
-            button { class: "button is-danger is-small", onclick: delete, Icon { class: "fa-solid fa-trash" } }
+            button { class: "button is-danger is-small", onclick: delete,
+                Icon { class: "fa-solid fa-trash" }
+            }
         }
     }
 }
