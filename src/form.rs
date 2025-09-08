@@ -10,7 +10,8 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
     let mut morningstar_id = use_signal(String::default);
     let mut market_value = use_signal(|| String::from(DEFAULT_MARKET_VALUE));
 
-    let add_entry = move |_| {
+    let add_entry = move |evt: Event<FormData>| {
+        evt.prevent_default();
         let id = morningstar_id.read().clone();
         *morningstar_id.write() = Default::default();
 
