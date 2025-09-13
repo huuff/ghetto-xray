@@ -1,0 +1,3 @@
+{
+  "tailwindcss.experimental.configFile": "./tailwind-vscode.css"
+}

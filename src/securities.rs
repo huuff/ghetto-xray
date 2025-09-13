@@ -16,29 +16,28 @@ pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Elemen
 
     rsx! {
         Modal { title: "Securities", is_open,
-            ul { class: "panel",
+            ul { class: "flex flex-col",
                 for security in &*SECURITIES {
-                    li { class: "panel-block",
-                        div { class: "is-flex is-flex-direction-row",
+                    li {
+                        div { class: "flex flex-row gap-4 items-center",
                             if portfolio().contains(&security.morningstar_id) {
-                                button {
-                                    class: "button security-left is-success is-outlined",
-                                    disabled: true,
+                                button { class: "btn btn-sm", disabled: true,
                                     Icon { class: "fa-solid fa-check" }
                                 }
                             } else {
                                 button {
-                                    class: "button security-left",
+                                    class: "btn btn-success btn-sm btn-outline",
                                     onclick: move |_| portfolio.write().add(security.clone().into()),
                                     Icon { class: "fa-solid fa-plus" }
                                 }
                             }
 
-                            div { class: "is-flex is-flex-direction-column is-align-items-start",
-                                p { class: "pb-2 has-text-weight-medium", "{security.name}" }
-                                p { class: "tag is-light", "{security.isin}" }
+                            div { class: "flex flex-col items-start gap-2",
+                                p { class: "font-medium", "{security.name}" }
+                                p { class: "text-xs badge badge-soft", "{security.isin}" }
                             }
                         }
+                        hr { class: "my-4" }
                     }
                 }
             }
