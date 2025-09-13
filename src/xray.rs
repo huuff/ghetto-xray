@@ -4,7 +4,7 @@ use dioxus::prelude::*;
 #[component]
 pub fn XRayButton(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
     let url = build_url(portfolio);
-    let class = format!("button px-6 is-primary {}", class.unwrap_or_default());
+    let class = format!("btn btn-success px-10 {}", class.unwrap_or_default());
 
     rsx! {
         a { class, href: url, target: "_blank",

@@ -22,13 +22,14 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
         });
         tracing::info!("added an entry for {id}");
     };
-    let class = format!("is-flex is-gap-2 {}", class.unwrap_or_default());
 
     rsx! {
-        form { class, onsubmit: add_entry,
+        form {
+            class: "flex flex-row gap-2",
+            class: "{class.as_deref().unwrap_or_default()}",
+            onsubmit: add_entry,
             input {
-                class: "input",
-                style: "width: 150px",
+                class: "input md:w-44",
                 required: true,
                 r#type: "text",
                 placeholder: "Morningstar ID",
@@ -37,8 +38,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
                 oninput: move |evt| *morningstar_id.write() = evt.value(),
             }
             input {
-                class: "input",
-                style: "width: 100px",
+                class: "input md:w-24",
                 required: true,
                 r#type: "number",
                 step: "0.01",
@@ -47,7 +47,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
                 tabindex: "2",
                 oninput: move |evt| *market_value.write() = evt.value(),
             }
-            button { class: "button is-light", r#type: "submit",
+            button { class: "btn btn-primary", r#type: "submit",
                 Icon { class: "fa-solid fa-plus" }
             }
         }

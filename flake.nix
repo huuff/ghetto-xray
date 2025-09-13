@@ -96,6 +96,8 @@
               wasm-pack # to test wasm
               dioxus.packages.${system}.dioxus-cli
               self.packages.${system}.wasm-bindgen-cli_0_2_101
+              tailwindcss_4
+              tailwindcss-language-server
 
               # TODO: I copied these off dioxus' official
               # repository flake, and rust-analyzer seems

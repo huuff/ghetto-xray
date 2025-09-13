@@ -1,25 +1,11 @@
-# Development
+# README
 
-Your new bare-bones project includes minimal organization with a single `main.rs` file and a few assets.
+## Development
 
-```
-project/
-├─ assets/ # Any assets that are used by the app should be placed here
-├─ src/
-│  ├─ main.rs # main.rs is the entry point to your application and currently contains all components for the app
-├─ Cargo.toml # The Cargo.toml file defines the dependencies and feature flags for your project
-```
+### Tailwind Hack
+There's a powerful dichotomy here:
 
-### Serving Your App
+* Dioxus won't work with a remote daisyUI plugin like `@plugin "daisyui"`
+* The vscode tailwindcss extension won't work with a local daisyUI plugin like `@plugin "tailwind-plugins/daisyUI"`
 
-Run the following command in the root of your project to start developing with the default platform:
-
-```bash
-dx serve --platform web
-```
-
-To run for a different platform, use the `--platform platform` flag. E.g.
-```bash
-dx serve --platform desktop
-```
-
+Therefore, I just copypasted the damn `tailwind.css`, created one only for vscode like it likes it, and one for dioxus as it likes it. Told vscode to use the one it likes and likewise for dioxus. Real hacky but it works.
