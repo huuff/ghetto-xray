@@ -74,7 +74,9 @@ fn Home() -> Element {
 #[component]
 fn OpenSecurities(is_open: Signal<bool>) -> Element {
     rsx! {
-        button { class: "btn btn-primary", onclick: move |_| *is_open.write() = true,
+        button {
+            class: "btn btn-primary",
+            onclick: move |_| *is_open.write() = true,
             Icon { class: "fa-solid fa-bars" }
         }
     }

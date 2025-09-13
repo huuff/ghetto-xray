@@ -63,6 +63,8 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
 #[component]
 fn TableRow(children: Element) -> Element {
     rsx! {
-        div { class: "grid grid-cols-1 gap-y-1 gap-x-3 md:grid-cols-4 md:grid md:items-center", {children} }
+        div { class: "grid grid-cols-1 gap-y-1 gap-x-3 md:grid-cols-4 md:grid md:items-center",
+            {children}
+        }
     }
 }

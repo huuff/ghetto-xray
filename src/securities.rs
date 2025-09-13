@@ -21,9 +21,7 @@ pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Elemen
                     li {
                         div { class: "flex flex-row gap-4 items-center",
                             if portfolio().contains(&security.morningstar_id) {
-                                button {
-                                    class: "btn btn-sm",
-                                    disabled: true,
+                                button { class: "btn btn-sm", disabled: true,
                                     Icon { class: "fa-solid fa-check" }
                                 }
                             } else {
