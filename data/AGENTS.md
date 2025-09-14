@@ -28,9 +28,15 @@ The CSV contains these columns:
 ### Search Strategy
 
 1. **Use ISIN codes for searching** - This is more accurate than fund names
-2. **Search pattern**: `{ISIN} morningstar` using native WebSearch tool
-3. **Look for Morningstar URLs** in search results that contain fund IDs
-4. **Preferred URL format**: `https://global.morningstar.com/es/inversiones/fondos/{MORNINGSTAR_ID}/cotizacion`
+2. **Search pattern**: `{ISIN} morningstar` using **NATIVE WebSearch tool ONLY** 
+3. **⚠️ CRITICAL: ALWAYS use the native WebSearch tool - NEVER use Brave search tools (mcp__brave__*)**
+4. **Look for Morningstar URLs** in search results that contain fund IDs
+5. **Preferred URL format**: `https://global.morningstar.com/es/inversiones/fondos/{MORNINGSTAR_ID}/cotizacion`
+
+### ⚠️ SEARCH TOOL REQUIREMENTS
+- **MUST USE**: WebSearch tool (native Claude tool)
+- **NEVER USE**: mcp__brave__brave_web_search or any mcp__brave__* tools
+- **This is mandatory and has been proven to work reliably**
 ### Morningstar ID Format
 
 - Morningstar IDs are 10-character alphanumeric codes
