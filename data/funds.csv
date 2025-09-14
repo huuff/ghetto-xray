@@ -45,21 +45,21 @@ FR0011071778,Ostrum Crédit Euro 1-3,RF Deuda Corporativa Corto Plazo EUR,2,"0,9
 FR0000027609,Lazard Euro Short Duration,RF Deuda Corporativa Corto Plazo EUR,3,"1,61","2,3",F0GBR04H1S,https://global.morningstar.com/es/inversiones/fondos/F0GBR04H1S/cotizacion
 LU0474966750,Pictet-Japan Index,RV Japón Cap. Grande,6,"9,57","0,37",F00000MIC4,https://global.morningstar.com/es/inversiones/fondos/F00000MIC4/cotizacion
 IE0031786142,Vanguard Emerging Markets Stock Index Fund,RV Global Emergente,6,"10,81","0,5",F0GBR06TSA,https://global.morningstar.com/es/inversiones/fondos/F0GBR06TSA/cotizacion
-IE00BYWYCC39,iShares Emerging Markets Index Fund (IE),RV Global Emergente,6,"11,02","0,5",,
-IE00BYX5M476,Fidelity MSCI Emerging Markets Index Fund,RV Global Emergente,6,"10,88","0,48",,
-LU0880062913,JPMorgan Funds - Global Healthcare Fund,RV Sector Salud,6,"16,61","-0,98",,
-LU0955863922,Invesco Funds - Invesco Euro Corporate Bond Fund,RF Deuda Corporativa EUR,4,"2,72","1,02",,
-LU0117859560,JPMorgan Funds - Europe Small Cap Fund,RV Europa Cap. Pequeña,6,"12,78","0,85",,
-IE00B67T5G21,iShares Euro Investment Grade Corporate Bond Index Fund (IE),RF Deuda Corporativa EUR,3,"2,82","1,17",,
-LU0261952419,Fidelity Funds - Global Healthcare Fund,RV Sector Salud,6,"15,68","-1,16",,
-LU0261952682,Fidelity Funds - Euro 50 Index Fund,RV Zona Euro Cap. Grande,6,"12,03","0,64",,
-LU0370787193,Fidelity Funds - Euro Corporate Bond Fund,RF Deuda Corporativa EUR,4,"4,36","0,49",,
-IE00BYX5NH74,Fidelity MSCI Japan Index Fund,RV Japón Cap. Grande,6,"10,41","-0,02",,
-FR0010016477,Candriam Index Arbitrage,Alt - Arbitraje de deuda,3,"0,79","0,45",,
-IE00BDFB7290,Vanguard Global Short-Term Corporate Bond Index Fund,RF Deuda Corporativa Global - USD Cubierto,3,"1,96","1,06",,
-LU0549541232,BlueBay Funds - BlueBay Investment Grade Euro Government Bond Fund,RF Deuda Pública EUR,3,"4,76","0,29",,
-LU0251661590,AXA World Funds - Euro Long Duration Bonds,RF Largo Plazo EUR,4,"9,19","0,01",,
-IE00B3KR3M49,PIMCO GIS plc - Euro Credit Fund,RF Deuda Corporativa EUR,4,"3,54","0,64",,
+IE00BYWYCC39,iShares Emerging Markets Index Fund (IE),RV Global Emergente,6,"11,02","0,5",F00000YZAJ,https://global.morningstar.com/es/inversiones/fondos/F00000YZAJ/cotizacion
+IE00BYX5M476,Fidelity MSCI Emerging Markets Index Fund,RV Global Emergente,6,"10,88","0,48",F00000ZZMN,https://global.morningstar.com/es/inversiones/fondos/F00000ZZMN/cotizacion
+LU0880062913,JPMorgan Funds - Global Healthcare Fund,RV Sector Salud,6,"16,61","-0,98",F00000PIIR,https://global.morningstar.com/es/inversiones/fondos/F00000PIIR/cotizacion
+LU0955863922,Invesco Funds - Invesco Euro Corporate Bond Fund,RF Deuda Corporativa EUR,4,"2,72","1,02",F00000QBAQ,https://global.morningstar.com/es/inversiones/fondos/F00000QBAQ/cotizacion
+LU0117859560,JPMorgan Funds - Europe Small Cap Fund,RV Europa Cap. Pequeña,6,"12,78","0,85",F0GBR04MXQ,https://global.morningstar.com/es/inversiones/fondos/F0GBR04MXQ/cotizacion
+IE00B67T5G21,iShares Euro Investment Grade Corporate Bond Index Fund (IE),RF Deuda Corporativa EUR,3,"2,82","1,17",F00000NU9X,https://global.morningstar.com/es/inversiones/fondos/F00000NU9X/cotizacion
+LU0261952419,Fidelity Funds - Global Healthcare Fund,RV Sector Salud,6,"15,68","-1,16",FOGBR05KLW,https://global.morningstar.com/es/inversiones/fondos/FOGBR05KLW/cotizacion
+LU0261952682,Fidelity Funds - Euro 50 Index Fund,RV Zona Euro Cap. Grande,6,"12,03","0,64",FOGBR05KLQ,https://global.morningstar.com/es/inversiones/fondos/FOGBR05KLQ/cotizacion
+LU0370787193,Fidelity Funds - Euro Corporate Bond Fund,RF Deuda Corporativa EUR,4,"4,36","0,49",F000002Y1D,https://global.morningstar.com/es/inversiones/fondos/F000002Y1D/cotizacion
+IE00BYX5NH74,Fidelity MSCI Japan Index Fund,RV Japón Cap. Grande,6,"10,41","-0,02",F00000ZZMU,https://global.morningstar.com/es/inversiones/fondos/F00000ZZMU/cotizacion
+FR0010016477,Candriam Index Arbitrage,Alt - Arbitraje de deuda,3,"0,79","0,45",F000001GU3,https://global.morningstar.com/es/inversiones/fondos/F000001GU3/cotizacion
+IE00BDFB7290,Vanguard Global Short-Term Corporate Bond Index Fund,RF Deuda Corporativa Global - USD Cubierto,3,"1,96","1,06",F000014600,https://global.morningstar.com/es/inversiones/fondos/F000014600/cotizacion
+LU0549541232,BlueBay Funds - BlueBay Investment Grade Euro Government Bond Fund,RF Deuda Pública EUR,3,"4,76","0,29",F00000SCBM,https://global.morningstar.com/es/inversiones/fondos/F00000SCBM/cotizacion
+LU0251661590,AXA World Funds - Euro Long Duration Bonds,RF Largo Plazo EUR,4,"9,19","0,01",F0000001V3,https://global.morningstar.com/es/inversiones/fondos/F0000001V3/cotizacion
+IE00B3KR3M49,PIMCO GIS plc - Euro Credit Fund,RF Deuda Corporativa EUR,4,"3,54","0,64",F00000ISMD,https://global.morningstar.com/es/inversiones/fondos/F00000ISMD/cotizacion
 LU0261951528,Fidelity Funds - European Smaller Companies Fund,RV Europa Cap. Pequeña,6,"12,84","-0,26",,
 LU1481583711,Flossbach von Storch - Bond Opportunities,RF Flexible Global-EUR Cubierto,3,"3,91","0,42",,
 IE00BJN4RG66,iShares Screened Global Corporate Bond Index Fund (IE),RF Deuda Corporativa Global,4,"4,03","0,36",,
@@ -73,7 +73,7 @@ LU1694789451,DNCA Invest Alpha Bonds,RF Flexible Global,3,"1,55","0,54",F00000ZY
 IE00BH65QP47,Vanguard Global Short-Term Bond Index Fund,RF Global - USD Cubierto,3,"1,93","0,84",,
 IE00BD8PGZ49,iShares $ Treasury Bond 20+yr UCITS ETF,RF Deuda Pública USD,6,"12,43","-0,39",,
 IE0007471471,Vanguard U.S. Government Bond Index Fund,RF Deuda Pública USD,4,"4,97","0,01",,
-IE000XOE1GE5,Man Global Investment Grade Opportunities,RF Deuda Corporativa Global - USD Cubierto,4,0,0,,
+IE000XOE1GE5,Man Global Investment Grade Opportunities,RF Deuda Corporativa Global - USD Cubierto,4,0,0,F00001D098,https://global.morningstar.com/es/inversiones/fondos/F00001D098/cotizacion
 LU0309035441,Pictet-Short-Term Money Market JPY,Mercado Monetario Otros,1,"9,08","-1,1",,
 IE00BDR0JY05,Ashoka WhiteOak ICAV - Ashoka WhiteOak India Opportunities Fund,RV India,6,"17,76","0,19",,
 LU1900066207,Amundi MSCI Brazil UCITS ETF,RV Brasil,7,"17,1","-0,42",,
@@ -99,7 +99,7 @@ IE00B579F325,Invesco Physical Gold ETC,Materias Primas - Metales Preciosos,4,"11
 LU0273159177,DWS Invest - Gold and Precious Metals Equities,RV Sector Oro y Metales Preciosos,7,"25,08","1,53",,
 LU0113257694,Schroder International Selection Fund EURO Corporate Bond,RF Deuda Corporativa EUR,4,"2,66","1,2",,
 LU0607220646,Schroder International Selection Fund EURO Corporate Bond,RF Deuda Corporativa EUR,3,"1,79","1,49",,
-IE000M7V94E1,VanEck Uranium and Nuclear Technologies UCITS ETF,RV Sector Recursos Naturales,7,0,0,,
+IE000M7V94E1,VanEck Uranium and Nuclear Technologies UCITS ETF,RV Sector Recursos Naturales,7,0,0,0P0001QFQQ,https://global.morningstar.com/es/inversiones/etfs/0P0001QFQQ/cotizacion
 IE00B42W4L06,Vanguard Global Small-Cap Index Fund,RV Global Cap. Pequeña,6,"17,22","0,04",,
 LU0234682986,Goldman Sachs US Small Cap CORE® Equity Portfolio,RV USA Cap. Pequeña,6,"26,96","-0,09",,
 IE00BH3Z9Y78,Heptagon Fund ICAV - Driehaus US Small Cap Equity Fund,RV USA Cap. Pequeña,7,"25,43","-0,44",,
@@ -112,7 +112,7 @@ IE00BN4GWH52,GQG Global UCITS ICAV - GQG Partners US Equity Fund,RV USA Cap. Gra
 IE00BYW5Q247,GQG Partners Emerging Markets Equity Fund,RV Global Emergente,6,"8,29","-1,58",,
 IE00BH481053,GQG Partners Global Equity Fund,RV Global Cap. Grande Growth,6,"15,39","-0,64",,
 ES0141116030,Hamco Global Value Fund FI,RV Global Cap. Pequeña,6,"11,67","0,12",F000014ACV,https://global.morningstar.com/es/inversiones/fondos/F000014ACV/cotizacion
-LU1295551144,Capital Group New Perspective Fund (LUX),RV Global Cap. Grande Growth,,0,0,,
+LU1295551144,Capital Group New Perspective Fund (LUX),RV Global Cap. Grande Growth,,0,0,0P00016RPN,https://global.morningstar.com/es/inversiones/fondos/0P00016RPN/cotizacion
 ES0112231008,Avantage Fund FI,Mixtos Flexibles EUR - Global,3,"10,8","0,98",F00000U28B,https://global.morningstar.com/es/inversiones/fondos/F00000U28B/cotizacion
 LU1797811236,M&G (Lux) Investment Funds 1 - M&G (Lux) European Strategic Value Fund,RV Europa Cap. Grande Value,6,"11,1","1,2",,
 LU0318931192,Fidelity Funds - China Focus Fd,RV China,6,"24,99","0,2",,
@@ -126,15 +126,15 @@ IE00008TZ2E8,Man Funds plc - Man Dynamic Income,RF Flexible Global-USD Cubierto,
 LU1984948874,SIH FCP - BrightGate Global Income Fund,RF Flexible Global-EUR Cubierto,4,3,"0,67",,
 IE000MI53C66,Man Global Investment Grade Opportunities,RF Deuda Corporativa Global - USD Cubierto,4,"3,3","1,6",,
 ES0111089001,Atmos Global FI,Mixtos Flexibles EUR - Global,4,"12,09","1,55",,
-IE000YYE6WK5,VanEck Defense ETF,RV Sector Materiales Industriales,7,0,0,,
-IE000OJ5TQP4,Future of Defence UCITS ETF,RV Sector Otros,6,0,0,,
-IE000U9ODG19,iShares Global Aerospace & Defence UCITS ETF,RV Sector Materiales Industriales,7,0,0,,
+IE000YYE6WK5,VanEck Defense ETF,RV Sector Materiales Industriales,7,0,0,0P0001QRJA,https://global.morningstar.com/es/inversiones/etfs/0P0001QRJA/cotizacion
+IE000OJ5TQP4,Future of Defence UCITS ETF,RV Sector Otros,6,0,0,0P0001RI0B,https://global.morningstar.com/es/inversiones/etfs/0P0001RI0B/cotizacion
+IE000U9ODG19,iShares Global Aerospace & Defence UCITS ETF,RV Sector Materiales Industriales,7,0,0,0P0001SUHV,https://global.morningstar.com/es/inversiones/etfs/0P0001SUHV/cotizacion
 LU1372006947,Cobas LUX SICAV - Cobas Selection Fund,RV Global Cap. Pequeña,7,"10,6","0,71",,
 ES0124037013,Cobas Selección FI,RV Global Cap. Pequeña,7,"10,76","0,73",F000016A7Y,https://global.morningstar.com/es/inversiones/fondos/F000016A7Y/cotizacion
 LU1953238794,EC SICAV - EverCapital Investments UCITS I Fund,Mixtos Flexibles EUR - Global,5,"7,8","0,35",,
 XS2399364582,Leverage Shares 5x Long S&P 500 ETP Securities,Trading - Apalancados/Inversos RV,,0,0,,
 LU1084165056,Fidelity Funds - Global Equity Income Fund,RV Global Alto Dividendo,5,"8,55","1,6",,
-ES0165243025,Myinvestor Value FI,RV Europa Cap. Pequeña,,0,0,,
+ES0165243025,Myinvestor Value FI,RV Europa Cap. Pequeña,,0,0,F00001CVXR,https://global.morningstar.com/es/inversiones/fondos/F00001CVXR/cotizacion
 LU0346389348,Fidelity Funds - Global Technology Fund,RV Sector Tecnología,6,"17,14","0,48",,
 IE00BMC38736,VanEck Semiconductor UCITS ETF,RV Sector Tecnología,7,"36,04","-0,44",,
 ES0175414012,Dunas Valor Equilibrado FI,Alt - Multiestrategia,4,"1,37","2,35",F00000QE8S,https://global.morningstar.com/es/inversiones/fondos/F00000QE8S/cotizacion
