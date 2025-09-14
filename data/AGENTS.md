@@ -104,6 +104,35 @@ immediately after finding and verifying the Morningstar ID.
 - Consider batch processing for efficiency
 - Prioritize high-value or frequently accessed funds
 - Implement error handling for funds not found on Morningstar
+## CRITICAL: How to Find Missing Morningstar IDs
+
+**IMPORTANT LESSON LEARNED**: Bash commands for counting missing IDs are unreliable and will give wrong results.
+
+### The ONLY Reliable Method:
+
+1. **Use the Read tool to manually scan the CSV file in sections**
+   - Use `Read` with `offset` and `limit` parameters to view chunks of the CSV
+   - Example: `Read file_path="/path/to/funds.csv" offset=100 limit=44`
+   - Visually scan each line for entries ending with `,,` (two commas = missing ID and URL)
+
+2. **DO NOT rely on bash commands like:**
+   - `awk`, `grep`, or `wc` commands - they consistently fail
+   - Automatic counting methods - they are unreliable for this CSV format
+   - Pattern matching with bash - the CSV structure confuses these tools
+
+3. **The correct way to identify missing IDs:**
+   - Look for lines ending with `,,` (two consecutive commas at the end)
+   - These indicate missing both Morningstar ID (column 7) and URL (column 8)
+   - Manual visual inspection is the ONLY reliable method
+
+### Example of what missing IDs look like:
+```
+LU0113257694,Schroder International Selection Fund EURO Corporate Bond,RF Deuda Corporativa EUR,4,"2,66","1,2",,
+```
+The `,,` at the end shows missing Morningstar ID and URL.
+
+**This method was the only one that worked after 100+ failed attempts with bash commands.**
+
 ## Files to Maintain
 
 - Update the main working file with new IDs as they are found
