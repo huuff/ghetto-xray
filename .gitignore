@@ -10,3 +10,6 @@
 **/*.rs.bk
 
 .direnv
+
+# I generally put the generated site here
+/output
