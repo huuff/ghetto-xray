@@ -5233,29 +5233,8 @@
   .h-full {
     height: 100%;
   }
-  .h-screen {
-    height: 100vh;
-  }
-  .max-h-11 {
-    max-height: calc(var(--spacing) * 11);
-  }
-  .max-h-11\/12 {
-    max-height: calc(11/12 * 100%);
-  }
-  .max-h-96 {
-    max-height: calc(var(--spacing) * 96);
-  }
-  .max-h-\[90vh\] {
-    max-height: 90vh;
-  }
   .max-h-\[95vh\] {
     max-height: 95vh;
-  }
-  .max-h-dvh {
-    max-height: 100dvh;
-  }
-  .max-h-screen {
-    max-height: 100vh;
   }
   .btn-wide {
     width: 100%;
@@ -5362,6 +5341,24 @@
   }
   .loading-xs {
     width: calc(var(--size-selector, 0.25rem) * 4);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
+  .w-96 {
+    width: calc(var(--spacing) * 96);
   }
   .max-w-\[1024px\] {
     max-width: 1024px;
@@ -5566,9 +5563,6 @@
   }
   .gap-y-1 {
     row-gap: calc(var(--spacing) * 1);
-  }
-  .overflow-clip {
-    overflow: clip;
   }
   .overflow-scroll {
     overflow: scroll;
