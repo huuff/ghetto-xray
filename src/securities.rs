@@ -6,7 +6,7 @@ use dioxus::prelude::*;
 use std::sync::LazyLock;
 
 pub static SECURITIES: LazyLock<Vec<Security>> = LazyLock::new(move || {
-    serde_json::from_str(include_str!("../data/generated_securities.json"))
+    serde_json::from_str(include_str!("../data/securities.json"))
         .expect("unable to parse securities")
 });
 
