@@ -698,5 +698,15 @@
     "isin": "LU0115773425",
     "morningstar_id": "F0GBR04LVP",
     "name": "Fidelity Funds - Global Technology Fund"
+  },
+  {
+    "isin": "IE00BYNFWX67",
+    "morningstar_id": "F000015KG1",
+    "name": "Heptagon Kopernik Global All Cap Equity"
+  },
+  {
+    "isin": "IE00B4ND3602",
+    "morningstar_id": "0P0000SV4E",
+    "name": "iShares Physical Gold ETC"
   }
 ]
