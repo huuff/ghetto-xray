@@ -53,16 +53,20 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
             }
             div { class: "flex flex-row gap-2 is-align-items-center",
                 span { class: "md:hidden font-bold", "Actions:" }
-                button { class: "btn btn-xs btn-error",
+                button {
+                    class: "btn btn-xs btn-error",
                     title: "Delete",
                     onclick: delete,
                     Icon { class: "fa-solid fa-trash" }
                 }
-                a { class: "btn btn-xs btn-info",
-                    title: "See on Morningstar",
-                    href: "https://global.morningstar.com/es/inversiones/fondos/{entry().morningstar_id}/cotizacion",
-                    target: "_blank",
-                    Icon { class: "fa-solid fa-arrow-up-right-from-square" }
+                if let Some(link) = entry().link() {
+                    a {
+                        class: "btn btn-xs btn-info",
+                        title: "See on Morningstar",
+                        href: link,
+                        target: "_blank",
+                        Icon { class: "fa-solid fa-arrow-up-right-from-square" }
+                    }
                 }
             }
         }

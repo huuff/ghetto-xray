@@ -19,6 +19,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
             morningstar_id: id.clone(),
             name: None,
             market_value: market_value.read().clone(),
+            r#type: None,
         });
         tracing::info!("added an entry for {id}");
     };

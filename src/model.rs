@@ -1,3 +1,5 @@
+use serde::{Deserialize, Serialize};
+
 use crate::constants::DEFAULT_MARKET_VALUE;
 
 nestify::nest! {
@@ -9,6 +11,7 @@ nestify::nest! {
             pub morningstar_id: String,
             pub name: Option<String>,
             pub market_value: String,
+            pub r#type: Option<SecurityType>,
         }>
     }
 }
@@ -18,6 +21,14 @@ pub struct Security {
     pub isin: String,
     pub name: String,
     pub morningstar_id: String,
+    pub r#type: SecurityType,
+}
+
+#[derive(Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+pub enum SecurityType {
+    Fund,
+    #[serde(rename = "ETF")]
+    Etf,
 }
 
 impl Portfolio {
@@ -54,19 +65,37 @@ impl Portfolio {
                     morningstar_id: "F000010KY6".into(),
                     name: Some("Horos Value Internacional FI".into()),
                     market_value: "1500".into(),
+                    r#type: Some(SecurityType::Fund),
                 },
                 PortfolioEntry {
                     morningstar_id: "F000014ACV".into(),
                     name: Some("Hamco Global Value Fund FI".into()),
                     market_value: "1500".into(),
+                    r#type: Some(SecurityType::Fund),
                 },
                 PortfolioEntry {
                     morningstar_id: "F00001019E".into(),
                     name: Some("Fidelity MSCI World Index Fund".into()),
                     market_value: "7000".into(),
+                    r#type: Some(SecurityType::Fund),
                 },
             ],
         }
+    }
+}
+
+impl PortfolioEntry {
+    pub fn link(&self) -> Option<String> {
+        self.r#type.map(|security_type| match security_type {
+            SecurityType::Fund => format!(
+                "https://global.morningstar.com/es/inversiones/fondos/{}/cotizacion",
+                self.morningstar_id
+            ),
+            SecurityType::Etf => format!(
+                "https://global.morningstar.com/es/inversiones/etfs/{}/cotizacion",
+                self.morningstar_id
+            ),
+        })
     }
 }
 
@@ -76,6 +105,7 @@ impl From<Security> for PortfolioEntry {
             morningstar_id: value.morningstar_id,
             name: Some(value.name),
             market_value: DEFAULT_MARKET_VALUE.into(),
+            r#type: Some(value.r#type),
         }
     }
 }
