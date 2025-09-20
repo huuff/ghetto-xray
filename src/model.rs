@@ -1,3 +1,8 @@
+use std::str::FromStr;
+
+use derive_more::Display;
+use serde::{Deserialize, Serialize};
+
 use crate::constants::DEFAULT_MARKET_VALUE;
 
 nestify::nest! {
@@ -9,6 +14,7 @@ nestify::nest! {
             pub morningstar_id: String,
             pub name: Option<String>,
             pub market_value: String,
+            pub r#type: SecurityType,
         }>
     }
 }
@@ -18,6 +24,17 @@ pub struct Security {
     pub isin: String,
     pub name: String,
     pub morningstar_id: String,
+    pub r#type: SecurityType,
+}
+
+// TODO use derive_more for FromStr for ETF once https://github.com/JelteF/derive_more/issues/480 is done
+// since we can currently only use the variant name
+#[derive(Clone, Copy, PartialEq, Eq, Serialize, Deserialize, Display)]
+pub enum SecurityType {
+    Fund,
+    #[serde(rename = "ETF")]
+    #[display("ETF")]
+    Etf,
 }
 
 impl Portfolio {
@@ -54,18 +71,36 @@ impl Portfolio {
                     morningstar_id: "F000010KY6".into(),
                     name: Some("Horos Value Internacional FI".into()),
                     market_value: "1500".into(),
+                    r#type: SecurityType::Fund,
                 },
                 PortfolioEntry {
                     morningstar_id: "F000014ACV".into(),
                     name: Some("Hamco Global Value Fund FI".into()),
                     market_value: "1500".into(),
+                    r#type: SecurityType::Fund,
                 },
                 PortfolioEntry {
                     morningstar_id: "F00001019E".into(),
                     name: Some("Fidelity MSCI World Index Fund".into()),
                     market_value: "7000".into(),
+                    r#type: SecurityType::Fund,
                 },
             ],
+        }
+    }
+}
+
+impl PortfolioEntry {
+    pub fn link(&self) -> String {
+        match self.r#type {
+            SecurityType::Fund => format!(
+                "https://global.morningstar.com/es/inversiones/fondos/{}/cotizacion",
+                self.morningstar_id
+            ),
+            SecurityType::Etf => format!(
+                "https://global.morningstar.com/es/inversiones/etfs/{}/cotizacion",
+                self.morningstar_id
+            ),
         }
     }
 }
@@ -76,6 +111,19 @@ impl From<Security> for PortfolioEntry {
             morningstar_id: value.morningstar_id,
             name: Some(value.name),
             market_value: DEFAULT_MARKET_VALUE.into(),
+            r#type: value.r#type,
+        }
+    }
+}
+
+impl FromStr for SecurityType {
+    type Err = anyhow::Error;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "Fund" => Ok(Self::Fund),
+            "ETF" => Ok(Self::Etf),
+            _ => Err(anyhow::anyhow!("unknown `SecurityType`: `{s}`")),
         }
     }
 }

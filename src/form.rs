@@ -1,6 +1,6 @@
 use crate::{
     constants::DEFAULT_MARKET_VALUE,
-    model::{Portfolio, PortfolioEntry},
+    model::{Portfolio, PortfolioEntry, SecurityType},
     ui::Icon,
 };
 use dioxus::prelude::*;
@@ -9,6 +9,7 @@ use dioxus::prelude::*;
 pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element {
     let mut morningstar_id = use_signal(String::default);
     let mut market_value = use_signal(|| String::from(DEFAULT_MARKET_VALUE));
+    let mut r#type = use_signal(|| SecurityType::Fund.to_string());
 
     let add_entry = move |evt: Event<FormData>| {
         evt.prevent_default();
@@ -19,6 +20,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
             morningstar_id: id.clone(),
             name: None,
             market_value: market_value.read().clone(),
+            r#type: r#type().parse().unwrap(),
         });
         tracing::info!("added an entry for {id}");
     };
@@ -46,6 +48,13 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
                 value: "{market_value}",
                 tabindex: "2",
                 oninput: move |evt| *market_value.write() = evt.value(),
+            }
+            select {
+                class: "select",
+                value: r#type,
+                onchange: move |evt| r#type.set(evt.value()),
+                option { value: SecurityType::Fund.to_string(), "Fund" }
+                option { value: SecurityType::Etf.to_string(), "ETF" }
             }
             button { class: "btn btn-primary", r#type: "submit",
                 Icon { class: "fa-solid fa-plus" }

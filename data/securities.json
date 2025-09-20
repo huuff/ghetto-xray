@@ -2,711 +2,853 @@
   {
     "isin": "LU0034353002",
     "morningstar_id": "F0GBR04NQN",
-    "name": "DWS Floating Rate Notes"
+    "name": "DWS Floating Rate Notes",
+    "type": "Fund"
   },
   {
     "isin": "FR0000989626",
     "morningstar_id": "F0GBR04M6M",
-    "name": "Groupama Trésorerie"
+    "name": "Groupama Trésorerie",
+    "type": "Fund"
   },
   {
     "isin": "LU1508158430",
     "morningstar_id": "F00000YM8X",
-    "name": "BlackRock Strategic Funds - BlackRock Systematic Asia Pacific Equity Absolute Return Fund"
+    "name": "BlackRock Strategic Funds - BlackRock Systematic Asia Pacific Equity Absolute Return Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1190417599",
     "morningstar_id": "0P0001UPP5",
-    "name": "Multi Units Luxembourg - Amundi Smart Overnight Return"
+    "name": "Multi Units Luxembourg - Amundi Smart Overnight Return",
+    "type": "Fund"
   },
   {
     "isin": "LU0352158918",
     "morningstar_id": "F000005M84",
-    "name": "UBAM - Dynamic US Dollar Bond"
+    "name": "UBAM - Dynamic US Dollar Bond",
+    "type": "Fund"
   },
   {
     "isin": "FR0011088657",
     "morningstar_id": "F00000N879",
-    "name": "Amundi Ultra Short Term Bond SRI"
+    "name": "Amundi Ultra Short Term Bond SRI",
+    "type": "Fund"
   },
   {
     "isin": "LU2482630675",
     "morningstar_id": "F00001DZCX",
-    "name": "European Specialist Investment Funds - M&G Total Return Credit Investment"
+    "name": "European Specialist Investment Funds - M&G Total Return Credit Investment",
+    "type": "Fund"
   },
   {
     "isin": "IE00BFZMJT78",
     "morningstar_id": "F000011OIS",
-    "name": "Neuberger Berman Short Duration Euro Bond Fund"
+    "name": "Neuberger Berman Short Duration Euro Bond Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0607220562",
     "morningstar_id": "F00000MG0P",
-    "name": "Schroder International Selection Fund EURO Corporate Bond"
+    "name": "Schroder International Selection Fund EURO Corporate Bond",
+    "type": "Fund"
   },
   {
     "isin": "ES0140794001",
     "morningstar_id": "F000016XFK",
-    "name": "Gamma Global FI"
+    "name": "Gamma Global FI",
+    "type": "Fund"
   },
   {
     "isin": "ES0138534054",
     "morningstar_id": "F00000WINH",
-    "name": "Santander Rendimiento FI"
+    "name": "Santander Rendimiento FI",
+    "type": "Fund"
   },
   {
     "isin": "IE00B03HD191",
     "morningstar_id": "F0GBR052TN",
-    "name": "Vanguard Global Stock Index Fund"
+    "name": "Vanguard Global Stock Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYX5NX33",
     "morningstar_id": "F00001019E",
-    "name": "Fidelity MSCI World Index Fund"
+    "name": "Fidelity MSCI World Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYX5MX67",
     "morningstar_id": "F00001019G",
-    "name": "Fidelity S&P 500 Index Fund"
+    "name": "Fidelity S&P 500 Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "FI0008811997",
     "morningstar_id": "F000000AEY",
-    "name": "Evli Nordic Corporate Bond Fund"
+    "name": "Evli Nordic Corporate Bond Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1623762843",
     "morningstar_id": "F000011ROH",
-    "name": "Carmignac Portfolio Credit"
+    "name": "Carmignac Portfolio Credit",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYX5P602",
     "morningstar_id": "F00000ZZMY",
-    "name": "Fidelity MSCI World Index Fund"
+    "name": "Fidelity MSCI World Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYX5N110",
     "morningstar_id": "F00000ZZN2",
-    "name": "Fidelity S&P 500 Index Fund"
+    "name": "Fidelity S&P 500 Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1988110927",
     "morningstar_id": "F000014TGO",
-    "name": "Buy & Hold Luxembourg B&H Bond"
+    "name": "Buy & Hold Luxembourg B&H Bond",
+    "type": "Fund"
   },
   {
     "isin": "ES0112618006",
     "morningstar_id": "F000014T7Y",
-    "name": "B&H Deuda FI"
+    "name": "B&H Deuda FI",
+    "type": "Fund"
   },
   {
     "isin": "LU1213836080",
     "morningstar_id": "F00000VKNA",
-    "name": "Fidelity Funds - Global Technology Fund"
+    "name": "Fidelity Funds - Global Technology Fund",
+    "type": "Fund"
   },
   {
     "isin": "FR0000447823",
     "morningstar_id": "F0GBR04EZP",
-    "name": "AXA Trésor Court Terme"
+    "name": "AXA Trésor Court Terme",
+    "type": "Fund"
   },
   {
     "isin": "ES0176954016",
     "morningstar_id": "F000010ABW",
-    "name": "Renta 4 Renta Fija FI"
+    "name": "Renta 4 Renta Fija FI",
+    "type": "Fund"
   },
   {
     "isin": "LU0210534227",
     "morningstar_id": "F0GBR05VVW",
-    "name": "JPMorgan Funds - Global Focus Fund"
+    "name": "JPMorgan Funds - Global Focus Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1164219682",
     "morningstar_id": "F00000VPP7",
-    "name": "AXA World Funds - Euro Credit Total Return"
+    "name": "AXA World Funds - Euro Credit Total Return",
+    "type": "Fund"
   },
   {
     "isin": "ES0176954008",
     "morningstar_id": "F00000PUJZ",
-    "name": "Renta 4 Renta Fija FI"
+    "name": "Renta 4 Renta Fija FI",
+    "type": "Fund"
   },
   {
     "isin": "LU0231205187",
     "morningstar_id": "F0GBR06IG6",
-    "name": "Franklin India Fund"
+    "name": "Franklin India Fund",
+    "type": "Fund"
   },
   {
     "isin": "ES0107696074",
     "morningstar_id": "F000017317",
-    "name": "Cinvest Multigestión Selección Oricalco FI"
+    "name": "Cinvest Multigestión Selección Oricalco FI",
+    "type": "Fund"
   },
   {
     "isin": "FR0010148981",
     "morningstar_id": "F0GBR04F8Y",
-    "name": "Carmignac Investissement"
+    "name": "Carmignac Investissement",
+    "type": "Fund"
   },
   {
     "isin": "FR0010149120",
     "morningstar_id": "F0GBR04F94",
-    "name": "Carmignac Sécurité"
+    "name": "Carmignac Sécurité",
+    "type": "Fund"
   },
   {
     "isin": "XS2434891219",
     "morningstar_id": "0P0001OEGE",
-    "name": "Fidelity Physical Bitcoin ETP"
+    "name": "Fidelity Physical Bitcoin ETP",
+    "type": "ETF"
   },
   {
     "isin": "LU1548497699",
     "morningstar_id": "F00000YXG7",
-    "name": "Allianz Global Investors Fund - Allianz Global Artificial Intelligence"
+    "name": "Allianz Global Investors Fund - Allianz Global Artificial Intelligence",
+    "type": "Fund"
   },
   {
     "isin": "LU0339661307",
     "morningstar_id": "F0000022BB",
-    "name": "Robeco QI European Conservative Equities"
+    "name": "Robeco QI European Conservative Equities",
+    "type": "Fund"
   },
   {
     "isin": "IE00B42W3S00",
     "morningstar_id": "F00000T1HQ",
-    "name": "Vanguard Global Small-Cap Index Fund"
+    "name": "Vanguard Global Small-Cap Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "FR0000991390",
     "morningstar_id": "F0GBR06OZK",
-    "name": "La Française Trésorerie ISR"
+    "name": "La Française Trésorerie ISR",
+    "type": "Fund"
   },
   {
     "isin": "LU0113258742",
     "morningstar_id": "F0GBR04DVY",
-    "name": "Schroder International Selection Fund EURO Corporate Bond"
+    "name": "Schroder International Selection Fund EURO Corporate Bond",
+    "type": "Fund"
   },
   {
     "isin": "ES0128520006",
     "morningstar_id": "F00000410P",
-    "name": "Renta 4 Renta Fija 6 Meses FI"
+    "name": "Renta 4 Renta Fija 6 Meses FI",
+    "type": "Fund"
   },
   {
     "isin": "IE0031574647",
     "morningstar_id": "F0GBR054PS",
-    "name": "Brandes European Value Fund"
+    "name": "Brandes European Value Fund",
+    "type": "Fund"
   },
   {
     "isin": "ES0128522002",
     "morningstar_id": "F00000H5PN",
-    "name": "Renta 4 Valor Relativo FI"
+    "name": "Renta 4 Valor Relativo FI",
+    "type": "Fund"
   },
   {
     "isin": "IE00B0M63516",
     "morningstar_id": "0P0000M6BD",
-    "name": "iShares MSCI Brazil UCITS ETF USD (Dist)"
+    "name": "iShares MSCI Brazil UCITS ETF USD (Dist)",
+    "type": "ETF"
   },
   {
     "isin": "LU0935222066",
     "morningstar_id": "F00000RPFJ",
-    "name": "Natixis AM Funds - Ostrum Credit Short Duration"
+    "name": "Natixis AM Funds - Ostrum Credit Short Duration",
+    "type": "Fund"
   },
   {
     "isin": "LU1914597502",
     "morningstar_id": "F000013B6G",
-    "name": "MFS Meridian Funds - Euro Credit Fund"
+    "name": "MFS Meridian Funds - Euro Credit Fund",
+    "type": "Fund"
   },
   {
     "isin": "FR0011071778",
     "morningstar_id": "F00000MSC6",
-    "name": "Ostrum Crédit Euro 1-3"
+    "name": "Ostrum Crédit Euro 1-3",
+    "type": "Fund"
   },
   {
     "isin": "FR0000027609",
     "morningstar_id": "F0GBR04H1S",
-    "name": "Lazard Euro Short Duration"
+    "name": "Lazard Euro Short Duration",
+    "type": "Fund"
   },
   {
     "isin": "LU0474966750",
     "morningstar_id": "F00000MIC4",
-    "name": "Pictet-Japan Index"
+    "name": "Pictet-Japan Index",
+    "type": "Fund"
   },
   {
     "isin": "IE0031786142",
     "morningstar_id": "F0GBR06TSA",
-    "name": "Vanguard Emerging Markets Stock Index Fund"
+    "name": "Vanguard Emerging Markets Stock Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYWYCC39",
     "morningstar_id": "F00000YZAJ",
-    "name": "iShares Emerging Markets Index Fund (IE)"
+    "name": "iShares Emerging Markets Index Fund (IE)",
+    "type": "ETF"
   },
   {
     "isin": "IE00BYX5M476",
     "morningstar_id": "F00000ZZMN",
-    "name": "Fidelity MSCI Emerging Markets Index Fund"
+    "name": "Fidelity MSCI Emerging Markets Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0880062913",
     "morningstar_id": "F00000PIIR",
-    "name": "JPMorgan Funds - Global Healthcare Fund"
+    "name": "JPMorgan Funds - Global Healthcare Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0955863922",
     "morningstar_id": "F00000QBAQ",
-    "name": "Invesco Funds - Invesco Euro Corporate Bond Fund"
+    "name": "Invesco Funds - Invesco Euro Corporate Bond Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0117859560",
     "morningstar_id": "F0GBR04MXQ",
-    "name": "JPMorgan Funds - Europe Small Cap Fund"
+    "name": "JPMorgan Funds - Europe Small Cap Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00B67T5G21",
     "morningstar_id": "F00000NU9X",
-    "name": "iShares Euro Investment Grade Corporate Bond Index Fund (IE)"
+    "name": "iShares Euro Investment Grade Corporate Bond Index Fund (IE)",
+    "type": "ETF"
   },
   {
     "isin": "LU0261952419",
     "morningstar_id": "FOGBR05KLW",
-    "name": "Fidelity Funds - Global Healthcare Fund"
+    "name": "Fidelity Funds - Global Healthcare Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0261952682",
     "morningstar_id": "FOGBR05KLQ",
-    "name": "Fidelity Funds - Euro 50 Index Fund"
+    "name": "Fidelity Funds - Euro 50 Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0370787193",
     "morningstar_id": "F000002Y1D",
-    "name": "Fidelity Funds - Euro Corporate Bond Fund"
+    "name": "Fidelity Funds - Euro Corporate Bond Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYX5NH74",
     "morningstar_id": "F00000ZZMU",
-    "name": "Fidelity MSCI Japan Index Fund"
+    "name": "Fidelity MSCI Japan Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "FR0010016477",
     "morningstar_id": "F000001GU3",
-    "name": "Candriam Index Arbitrage"
+    "name": "Candriam Index Arbitrage",
+    "type": "Fund"
   },
   {
     "isin": "IE00BDFB7290",
     "morningstar_id": "F000014600",
-    "name": "Vanguard Global Short-Term Corporate Bond Index Fund"
+    "name": "Vanguard Global Short-Term Corporate Bond Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0549541232",
     "morningstar_id": "F00000SCBM",
-    "name": "BlueBay Funds - BlueBay Investment Grade Euro Government Bond Fund"
+    "name": "BlueBay Funds - BlueBay Investment Grade Euro Government Bond Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0251661590",
     "morningstar_id": "F0000001V3",
-    "name": "AXA World Funds - Euro Long Duration Bonds"
+    "name": "AXA World Funds - Euro Long Duration Bonds",
+    "type": "Fund"
   },
   {
     "isin": "IE00B3KR3M49",
     "morningstar_id": "F00000ISMD",
-    "name": "PIMCO GIS plc - Euro Credit Fund"
+    "name": "PIMCO GIS plc - Euro Credit Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0261951528",
     "morningstar_id": "FOGBR05KLS",
-    "name": "Fidelity Funds - European Smaller Companies Fund"
+    "name": "Fidelity Funds - European Smaller Companies Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1481583711",
     "morningstar_id": "F00000XXY3",
-    "name": "Flossbach von Storch - Bond Opportunities"
+    "name": "Flossbach von Storch - Bond Opportunities",
+    "type": "Fund"
   },
   {
     "isin": "IE00BJN4RG66",
     "morningstar_id": "F000014U69",
-    "name": "iShares Screened Global Corporate Bond Index Fund (IE)"
+    "name": "iShares Screened Global Corporate Bond Index Fund (IE)",
+    "type": "ETF"
   },
   {
     "isin": "IE00B84J9L26",
     "morningstar_id": "F00000OZ46",
-    "name": "PIMCO GIS plc - Income Fund"
+    "name": "PIMCO GIS plc - Income Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0625737910",
     "morningstar_id": "F00000MO6Y",
-    "name": "Pictet - China Index"
+    "name": "Pictet - China Index",
+    "type": "Fund"
   },
   {
     "isin": "IE00BSKRJX20",
     "morningstar_id": "0P00015FXH",
-    "name": "iShares € Govt Bond 20yr Target Duration UCITS ETF"
+    "name": "iShares € Govt Bond 20yr Target Duration UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "IE00B246KL88",
     "morningstar_id": "F000001GFI",
-    "name": "Vanguard 20+ Year Euro Treasury Index Fund"
+    "name": "Vanguard 20+ Year Euro Treasury Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1883306497",
     "morningstar_id": "F0GBR04D3Q",
-    "name": "Amundi Funds - European Equity Small Cap"
+    "name": "Amundi Funds - European Equity Small Cap",
+    "type": "Fund"
   },
   {
     "isin": "IE00B18GC888",
     "morningstar_id": "F00000T1HT",
-    "name": "Vanguard Global Bond Index Fund"
+    "name": "Vanguard Global Bond Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1694789451",
     "morningstar_id": "F00000ZY7L",
-    "name": "DNCA Invest Alpha Bonds"
+    "name": "DNCA Invest Alpha Bonds",
+    "type": "Fund"
   },
   {
     "isin": "IE00BH65QP47",
     "morningstar_id": "F00000T4PK",
-    "name": "Vanguard Global Short-Term Bond Index Fund"
+    "name": "Vanguard Global Short-Term Bond Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BD8PGZ49",
     "morningstar_id": "0P0001M1QT",
-    "name": "iShares $ Treasury Bond 20+yr UCITS ETF"
+    "name": "iShares $ Treasury Bond 20+yr UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "IE0007471471",
     "morningstar_id": "F0GBR052E1",
-    "name": "Vanguard U.S. Government Bond Index Fund"
+    "name": "Vanguard U.S. Government Bond Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE000XOE1GE5",
     "morningstar_id": "F00001D098",
-    "name": "Man Global Investment Grade Opportunities"
+    "name": "Man Global Investment Grade Opportunities",
+    "type": "Fund"
   },
   {
     "isin": "LU0309035441",
     "morningstar_id": "F000000QSA",
-    "name": "Pictet-Short-Term Money Market JPY"
+    "name": "Pictet-Short-Term Money Market JPY",
+    "type": "Fund"
   },
   {
     "isin": "IE00BDR0JY05",
     "morningstar_id": "F0000146BM",
-    "name": "Ashoka WhiteOak ICAV - Ashoka WhiteOak India Opportunities Fund"
+    "name": "Ashoka WhiteOak ICAV - Ashoka WhiteOak India Opportunities Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU1900066207",
     "morningstar_id": "0P0001H33L",
-    "name": "Amundi MSCI Brazil UCITS ETF"
+    "name": "Amundi MSCI Brazil UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "LU0551369712",
     "morningstar_id": "F00000LNTQ",
-    "name": "HSBC Global Investment Funds - Brazil Equity"
+    "name": "HSBC Global Investment Funds - Brazil Equity",
+    "type": "Fund"
   },
   {
     "isin": "LU0329070915",
     "morningstar_id": "F00000MHIV",
-    "name": "Jupiter Global Fund - Jupiter India Select"
+    "name": "Jupiter Global Fund - Jupiter India Select",
+    "type": "Fund"
   },
   {
     "isin": "IE0031786696",
     "morningstar_id": "F00000T1HU",
-    "name": "Vanguard Emerging Markets Stock Index Fund"
+    "name": "Vanguard Emerging Markets Stock Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BGHQF631",
     "morningstar_id": "F00000RZ75",
-    "name": "Guinness Asset Management Funds plc - Global Equity Income"
+    "name": "Guinness Asset Management Funds plc - Global Equity Income",
+    "type": "Fund"
   },
   {
     "isin": "LU0849399786",
     "morningstar_id": "F00000P15I",
-    "name": "Schroder International Selection Fund EURO High Yield"
+    "name": "Schroder International Selection Fund EURO High Yield",
+    "type": "Fund"
   },
   {
     "isin": "LU1984712320",
     "morningstar_id": "F000013W45",
-    "name": "Janus Henderson Horizon Global Smaller Companies Fund"
+    "name": "Janus Henderson Horizon Global Smaller Companies Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00B441G979",
     "morningstar_id": "0P00016T1S",
-    "name": "iShares V PLC - iShares MSCI World EUR Hedged UCITS ETF (Acc)"
+    "name": "iShares V PLC - iShares MSCI World EUR Hedged UCITS ETF (Acc)",
+    "type": "ETF"
   },
   {
     "isin": "ES0112611001",
     "morningstar_id": "F00000WI0D",
-    "name": "Azvalor Internacional FI"
+    "name": "Azvalor Internacional FI",
+    "type": "Fund"
   },
   {
     "isin": "ES0119199000",
     "morningstar_id": "F00000YN5R",
-    "name": "Cobas Internacional FI"
+    "name": "Cobas Internacional FI",
+    "type": "Fund"
   },
   {
     "isin": "IE00BH480S68",
     "morningstar_id": "F000011K3P",
-    "name": "GQG Partners Global Equity Fund"
+    "name": "GQG Partners Global Equity Fund",
+    "type": "Fund"
   },
   {
     "isin": "ES0110485010",
     "morningstar_id": "F0000119M8",
-    "name": "Tressis Cartera Eco30 FI"
+    "name": "Tressis Cartera Eco30 FI",
+    "type": "Fund"
   },
   {
     "isin": "LU1593227850",
     "morningstar_id": "F00000YV5N",
-    "name": "BlackRock Strategic Funds - BlackRock Systematic Asia Pacific Equity Absolute Return Fund"
+    "name": "BlackRock Strategic Funds - BlackRock Systematic Asia Pacific Equity Absolute Return Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0348926287",
     "morningstar_id": "F000001AKN",
-    "name": "Nordea 1 - Global Climate and Environment Fund"
+    "name": "Nordea 1 - Global Climate and Environment Fund",
+    "type": "Fund"
   },
   {
     "isin": "ES0159259011",
     "morningstar_id": "F00000V7MT",
-    "name": "Magallanes European Equity FI"
+    "name": "Magallanes European Equity FI",
+    "type": "Fund"
   },
   {
     "isin": "ES0173311103",
     "morningstar_id": "F00000VYOL",
-    "name": "Renta 4 Multigestión Numantia Patrimonio Global FI"
+    "name": "Renta 4 Multigestión Numantia Patrimonio Global FI",
+    "type": "Fund"
   },
   {
     "isin": "ES0114673033",
     "morningstar_id": "F0GBR04PSV",
-    "name": "Bestinfond FI"
+    "name": "Bestinfond FI",
+    "type": "Fund"
   },
   {
     "isin": "ES0146309002",
     "morningstar_id": "F000010KY6",
-    "name": "Horos Value Internacional FI"
+    "name": "Horos Value Internacional FI",
+    "type": "Fund"
   },
   {
     "isin": "IE00BF12WY77",
     "morningstar_id": "F000011XOZ",
-    "name": "Polar Capital Funds PLC - Polar Capital Healthcare Opportunities Fund"
+    "name": "Polar Capital Funds PLC - Polar Capital Healthcare Opportunities Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00B579F325",
     "morningstar_id": "0P00019OGB",
-    "name": "Invesco Physical Gold ETC"
+    "name": "Invesco Physical Gold ETC",
+    "type": "ETF"
   },
   {
     "isin": "LU0273159177",
     "morningstar_id": "F0000009DR",
-    "name": "DWS Invest - Gold and Precious Metals Equities"
+    "name": "DWS Invest - Gold and Precious Metals Equities",
+    "type": "Fund"
   },
   {
     "isin": "LU0113257694",
     "morningstar_id": "F0GBR04DV6",
-    "name": "Schroder International Selection Fund EURO Corporate Bond"
+    "name": "Schroder International Selection Fund EURO Corporate Bond",
+    "type": "Fund"
   },
   {
     "isin": "LU0607220646",
     "morningstar_id": "F00000MG0O",
-    "name": "Schroder International Selection Fund EURO Corporate Bond"
+    "name": "Schroder International Selection Fund EURO Corporate Bond",
+    "type": "Fund"
   },
   {
     "isin": "IE000M7V94E1",
     "morningstar_id": "0P0001QFQQ",
-    "name": "VanEck Uranium and Nuclear Technologies UCITS ETF"
+    "name": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "IE00B42W4L06",
     "morningstar_id": "F00000PA9N",
-    "name": "Vanguard Global Small-Cap Index Fund"
+    "name": "Vanguard Global Small-Cap Index Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0234682986",
     "morningstar_id": "F0GBR064OK",
-    "name": "Goldman Sachs US Small Cap CORE® Equity Portfolio"
+    "name": "Goldman Sachs US Small Cap CORE® Equity Portfolio",
+    "type": "Fund"
   },
   {
     "isin": "IE00BH3Z9Y78",
     "morningstar_id": "F000014BQ0",
-    "name": "Heptagon Fund ICAV - Driehaus US Small Cap Equity Fund"
+    "name": "Heptagon Fund ICAV - Driehaus US Small Cap Equity Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BG0J4C88",
     "morningstar_id": "0P0001EJX1",
-    "name": "iShares Digital Security UCITS ETF"
+    "name": "iShares Digital Security UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "LU1819480192",
     "morningstar_id": "F000010S65",
-    "name": "Echiquier Artificial Intelligence"
+    "name": "Echiquier Artificial Intelligence",
+    "type": "Fund"
   },
   {
     "isin": "DE0008474149",
     "morningstar_id": "F0GBR04CQD",
-    "name": "DWS Artificial Intelligence"
+    "name": "DWS Artificial Intelligence",
+    "type": "Fund"
   },
   {
     "isin": "LU0280435388",
     "morningstar_id": "F000000AVP",
-    "name": "Pictet - Clean Energy Transition"
+    "name": "Pictet - Clean Energy Transition",
+    "type": "Fund"
   },
   {
     "isin": "LU2145461757",
     "morningstar_id": "F000015UJY",
-    "name": "Robeco Smart Energy"
+    "name": "Robeco Smart Energy",
+    "type": "Fund"
   },
   {
     "isin": "IE00BN4GWH52",
     "morningstar_id": "F0000168DK",
-    "name": "GQG Global UCITS ICAV - GQG Partners US Equity Fund"
+    "name": "GQG Global UCITS ICAV - GQG Partners US Equity Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYW5Q247",
     "morningstar_id": "F00000Z536",
-    "name": "GQG Partners Emerging Markets Equity Fund"
+    "name": "GQG Partners Emerging Markets Equity Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BH481053",
     "morningstar_id": "F000011K3W",
-    "name": "GQG Partners Global Equity Fund"
+    "name": "GQG Partners Global Equity Fund",
+    "type": "Fund"
   },
   {
     "isin": "ES0141116030",
     "morningstar_id": "F000014ACV",
-    "name": "Hamco Global Value Fund FI"
+    "name": "Hamco Global Value Fund FI",
+    "type": "Fund"
   },
   {
     "isin": "LU1295551144",
     "morningstar_id": "0P00016RPN",
-    "name": "Capital Group New Perspective Fund (LUX)"
+    "name": "Capital Group New Perspective Fund (LUX)",
+    "type": "Fund"
   },
   {
     "isin": "ES0112231008",
     "morningstar_id": "F00000U28B",
-    "name": "Avantage Fund FI"
+    "name": "Avantage Fund FI",
+    "type": "Fund"
   },
   {
     "isin": "LU1797811236",
     "morningstar_id": "F000010L0W",
-    "name": "M&G (Lux) Investment Funds 1 - M&G (Lux) European Strategic Value Fund"
+    "name": "M&G (Lux) Investment Funds 1 - M&G (Lux) European Strategic Value Fund",
+    "type": "Fund"
   },
   {
     "isin": "LU0318931192",
     "morningstar_id": "F000000R2N",
-    "name": "Fidelity Funds - China Focus Fd"
+    "name": "Fidelity Funds - China Focus Fd",
+    "type": "Fund"
   },
   {
     "isin": "IE00BDGV0290",
     "morningstar_id": "F00000YHKO",
-    "name": "Guinness Asset Management Funds plc - Global Equity Income"
+    "name": "Guinness Asset Management Funds plc - Global Equity Income",
+    "type": "Fund"
   },
   {
     "isin": "FR0010527275",
     "morningstar_id": "0P0000N98I",
-    "name": "Amundi MSCI Water ESG Screened UCITS ETF"
+    "name": "Amundi MSCI Water ESG Screened UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "FR001400CFA4",
     "morningstar_id": "F00001F6LE",
-    "name": "Ostrum Credit Ultra Short Plus"
+    "name": "Ostrum Credit Ultra Short Plus",
+    "type": "Fund"
   },
   {
     "isin": "ES0175437005",
     "morningstar_id": "F00000ZN9Q",
-    "name": "Dunas Valor Prudente FI"
+    "name": "Dunas Valor Prudente FI",
+    "type": "Fund"
   },
   {
     "isin": "LU2357810931",
     "morningstar_id": "F00001CIN6",
-    "name": "Amundi S.F. - Diversified Short-Term Bond"
+    "name": "Amundi S.F. - Diversified Short-Term Bond",
+    "type": "Fund"
   },
   {
     "isin": "ES0116848005",
     "morningstar_id": "F00000LICF",
-    "name": "Global Allocation FI"
+    "name": "Global Allocation FI",
+    "type": "Fund"
   },
   {
     "isin": "IE00008TZ2E8",
     "morningstar_id": "F00001E59X",
-    "name": "Man Funds plc - Man Dynamic Income"
+    "name": "Man Funds plc - Man Dynamic Income",
+    "type": "Fund"
   },
   {
     "isin": "LU1984948874",
     "morningstar_id": "F000013S4E",
-    "name": "SIH FCP - BrightGate Global Income Fund"
+    "name": "SIH FCP - BrightGate Global Income Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE000MI53C66",
     "morningstar_id": "F00001FEQO",
-    "name": "Man Global Investment Grade Opportunities"
+    "name": "Man Global Investment Grade Opportunities",
+    "type": "Fund"
   },
   {
     "isin": "ES0111089001",
     "morningstar_id": "F00001EHHC",
-    "name": "Atmos Global FI"
+    "name": "Atmos Global FI",
+    "type": "Fund"
   },
   {
     "isin": "IE000YYE6WK5",
     "morningstar_id": "0P0001QRJA",
-    "name": "VanEck Defense ETF"
+    "name": "VanEck Defense ETF",
+    "type": "ETF"
   },
   {
     "isin": "IE000OJ5TQP4",
     "morningstar_id": "0P0001RI0B",
-    "name": "Future of Defence UCITS ETF"
+    "name": "Future of Defence UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "IE000U9ODG19",
     "morningstar_id": "0P0001SUHV",
-    "name": "iShares Global Aerospace & Defence UCITS ETF"
+    "name": "iShares Global Aerospace & Defence UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "LU1372006947",
     "morningstar_id": "F00000YXEW",
-    "name": "Cobas LUX SICAV - Cobas Selection Fund"
+    "name": "Cobas LUX SICAV - Cobas Selection Fund",
+    "type": "Fund"
   },
   {
     "isin": "ES0124037013",
     "morningstar_id": "F000016A7Y",
-    "name": "Cobas Selección FI"
+    "name": "Cobas Selección FI",
+    "type": "Fund"
   },
   {
     "isin": "LU1084165056",
     "morningstar_id": "F00000TV9K",
-    "name": "Fidelity Funds - Global Equity Income Fund"
+    "name": "Fidelity Funds - Global Equity Income Fund",
+    "type": "Fund"
   },
   {
     "isin": "ES0165243025",
     "morningstar_id": "F00001CVXR",
-    "name": "Myinvestor Value FI"
+    "name": "Myinvestor Value FI",
+    "type": "Fund"
   },
   {
     "isin": "LU0346389348",
     "morningstar_id": "F000001ATI",
-    "name": "Fidelity Funds - Global Technology Fund"
+    "name": "Fidelity Funds - Global Technology Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BMC38736",
     "morningstar_id": "0P0001LB9Z",
-    "name": "VanEck Semiconductor UCITS ETF"
+    "name": "VanEck Semiconductor UCITS ETF",
+    "type": "ETF"
   },
   {
     "isin": "ES0175414012",
     "morningstar_id": "F00000QE8S",
-    "name": "Dunas Valor Equilibrado FI"
+    "name": "Dunas Valor Equilibrado FI",
+    "type": "Fund"
   },
   {
     "isin": "ES0175316001",
     "morningstar_id": "F00000OEIT",
-    "name": "Dunas Valor Flexible FI"
+    "name": "Dunas Valor Flexible FI",
+    "type": "Fund"
   },
   {
     "isin": "LU1694789535",
     "morningstar_id": "F00000ZY7M",
-    "name": "DNCA Invest Alpha Bonds"
+    "name": "DNCA Invest Alpha Bonds",
+    "type": "Fund"
   },
   {
     "isin": "LU0115773425",
     "morningstar_id": "F0GBR04LVP",
-    "name": "Fidelity Funds - Global Technology Fund"
+    "name": "Fidelity Funds - Global Technology Fund",
+    "type": "Fund"
   },
   {
     "isin": "IE00BYNFWX67",
     "morningstar_id": "F000015KG1",
-    "name": "Heptagon Kopernik Global All Cap Equity"
+    "name": "Heptagon Kopernik Global All Cap Equity",
+    "type": "Fund"
   },
   {
     "isin": "IE00B4ND3602",
     "morningstar_id": "0P0000SV4E",
-    "name": "iShares Physical Gold ETC"
+    "name": "iShares Physical Gold ETC",
+    "type": "ETF"
   }
 ]
