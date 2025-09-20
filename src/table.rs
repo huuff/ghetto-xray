@@ -59,14 +59,12 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
                     onclick: delete,
                     Icon { class: "fa-solid fa-trash" }
                 }
-                if let Some(link) = entry().link() {
-                    a {
-                        class: "btn btn-xs btn-info",
-                        title: "See on Morningstar",
-                        href: link,
-                        target: "_blank",
-                        Icon { class: "fa-solid fa-arrow-up-right-from-square" }
-                    }
+                a {
+                    class: "btn btn-xs btn-info",
+                    title: "See on Morningstar",
+                    href: entry().link(),
+                    target: "_blank",
+                    Icon { class: "fa-solid fa-arrow-up-right-from-square" }
                 }
             }
         }
