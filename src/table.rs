@@ -56,6 +56,11 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
                 button { class: "btn btn-xs btn-error", onclick: delete,
                     Icon { class: "fa-solid fa-trash" }
                 }
+                a { class: "btn btn-xs btn-info",
+                    href: "https://global.morningstar.com/es/inversiones/fondos/{entry().morningstar_id}/cotizacion",
+                    target: "_blank",
+                    Icon { class: "fa-solid fa-arrow-up-right-from-square" }
+                }
             }
         }
     }
