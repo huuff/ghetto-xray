@@ -42,7 +42,7 @@ fn Home() -> Element {
     use table::PortfolioTable;
     use xray::XRayButton;
 
-    let portfolio = use_signal(Portfolio::sample);
+    let portfolio = Portfolio::init();
     let is_securities_open = use_signal(|| false);
 
     rsx! {

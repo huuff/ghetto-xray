@@ -1,15 +1,17 @@
 use std::str::FromStr;
 
 use derive_more::Display;
+use dioxus::prelude::*;
+use gloo_storage::Storage;
 use serde::{Deserialize, Serialize};
 
 use crate::constants::DEFAULT_MARKET_VALUE;
 
 nestify::nest! {
-    #[derive(Default, Clone, PartialEq)]
+    #[derive( Clone, PartialEq, Serialize, Deserialize)]*
+    #[derive(Default)]
     pub struct Portfolio {
         // MAYBE: should make it priv to enforce invariants (e.g. go thorugh add)
-        #>[derive(Clone, PartialEq)]
         pub entries: Vec<pub struct PortfolioEntry {
             pub morningstar_id: String,
             pub name: Option<String>,
@@ -60,6 +62,19 @@ impl Portfolio {
         for entry in &mut self.entries {
             entry.market_value = DEFAULT_MARKET_VALUE.into();
         }
+    }
+
+    /// Tries to load a portfolio from local storage, or initializes a new one if none is in local storage
+    pub fn init() -> Signal<Self> {
+        use gloo_storage::LocalStorage;
+
+        let portfolio = use_signal(|| {
+            LocalStorage::get::<Self>("portfolio").unwrap_or_else(|_| Portfolio::sample())
+        });
+
+        use_effect(move || LocalStorage::set("portfolio", portfolio()).unwrap());
+
+        portfolio
     }
 }
 
