@@ -1,7 +1,7 @@
 {
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     rust-overlay.url = "github:oxalica/rust-overlay";
     systems.url = "github:nix-systems/x86_64-linux";
     treefmt = {
