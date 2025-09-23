@@ -43,6 +43,8 @@
     };
     settings = {
       allFeatures = true;
+      denyWarnings = true;
+      extraArgs = "--all-targets";
     };
   };
 
