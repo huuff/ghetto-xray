@@ -24,13 +24,13 @@
             ''
               set -eu
 
-              echo "test"
               for file in "$@"; do
-                # first we check whether the file needs changes, because apparently,
-                # formatting it always updates the mtime, appears as modified to treefmt,
-                # and treefmt on check mode (for pre-commit) will always fail
-                if ! ${dx} fmt --check --file "$file" > /dev/null; then
-                  ${dx} fmt --file "$file" || rc="$?"
+                tmp="$file.FORMATTED"
+                ${dx} fmt --file - <"$file" > "$tmp"
+                if ! cmp -s "$file" "$tmp"; then
+                  mv -f "$tmp" "$file"
+                else
+                  rm "$tmp"
                 fi
               done
 
@@ -38,7 +38,7 @@
             '';
         };
 
-        includes = [ "*.lol" ];
+        includes = [ "*.rs" ];
       };
     };
   };
