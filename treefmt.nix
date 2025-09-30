@@ -25,6 +25,11 @@
               set -eu
 
               for file in "$@"; do
+                # we have to do this incredibly weird shit because apparently all dx fmt commands
+                # modify the file (update mtime), and that will make the treefmt check mode fail
+                # (in pre-commit for example).
+                # so we just put the formatted output in some other file, and put it back only if we're
+                # sure it's changed
                 tmp="$file.FORMATTED"
                 ${dx} fmt --file - <"$file" > "$tmp"
                 if ! cmp -s "$file" "$tmp"; then
