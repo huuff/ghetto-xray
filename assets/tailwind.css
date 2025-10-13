@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -156,9 +156,6 @@
   }
   ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
     padding-block: 0;
-  }
-  ::-webkit-calendar-picker-indicator {
-    line-height: 1;
   }
   :-moz-ui-invalid {
     box-shadow: none;
@@ -4624,6 +4621,18 @@
     opacity: 60%;
     font-weight: 600;
   }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
   .carousel-item {
     box-sizing: content-box;
     display: flex;
@@ -5344,6 +5353,12 @@
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
+  }
+  .w-\[90\%\] {
+    width: 90%;
+  }
+  .w-full {
+    width: 100%;
   }
   .max-w-\[1024px\] {
     max-width: 1024px;
