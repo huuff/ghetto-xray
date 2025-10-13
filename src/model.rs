@@ -21,7 +21,7 @@ nestify::nest! {
     }
 }
 
-#[derive(serde::Deserialize, Clone)]
+#[derive(serde::Deserialize, Clone, PartialEq, Eq)]
 pub struct Security {
     pub isin: String,
     pub name: String,
