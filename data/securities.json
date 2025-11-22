@@ -850,5 +850,11 @@
     "morningstar_id": "0P0000SV4E",
     "name": "iShares Physical Gold ETC",
     "type": "ETF"
+  },
+  {
+    "isin": "LU0840158819",
+    "morningstar_id": "F00000OS8X",
+    "name": "Storm Bond RC EUR",
+    "type": "Fund"
   }
 ]
