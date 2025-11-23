@@ -3,12 +3,15 @@ mod form;
 mod model;
 mod securities;
 mod table;
+mod tutorial;
 mod ui;
 mod xray;
 
 use dioxus::prelude::*;
 use model::Portfolio;
 use ui::Icon;
+
+use crate::tutorial::Tutorial;
 
 #[derive(Debug, Clone, Routable, PartialEq)]
 #[rustfmt::skip]
@@ -44,6 +47,7 @@ fn Home() -> Element {
 
     let portfolio = Portfolio::init();
     let is_securities_open = use_signal(|| false);
+    let is_tutorial_open = use_signal(|| false);
 
     rsx! {
         main { class: "flex flex-col gap-8",
@@ -60,13 +64,18 @@ fn Home() -> Element {
                     div { class: "flex flex-col gap-5 md:flex-row md:justify-between md:gap-0",
                         div { class: "flex flex-col gap-2 md:flex-row md:gap-2",
                             EntryForm { portfolio }
-                            OpenSecurities { is_open: is_securities_open }
+                            div { class: "flex flex-row gap-2 w-full md:w-auto",
+                                OpenSecurities { is_open: is_securities_open }
+                                OpenTutorial { is_open: is_tutorial_open }
+                            }
+
                         }
                         XRayButton { portfolio }
                     }
                 }
             }
             Securities { portfolio, is_open: is_securities_open }
+            Tutorial { is_open: is_tutorial_open }
         }
     }
 }
@@ -75,9 +84,20 @@ fn Home() -> Element {
 fn OpenSecurities(is_open: Signal<bool>) -> Element {
     rsx! {
         button {
-            class: "btn btn-primary",
+            class: "btn btn-primary flex-1",
             onclick: move |_| *is_open.write() = true,
             Icon { class: "fa-solid fa-bars" }
+        }
+    }
+}
+
+#[component]
+fn OpenTutorial(is_open: Signal<bool>) -> Element {
+    rsx! {
+        button {
+            class: "btn btn-info flex-1",
+            onclick: move |_| *is_open.write() = true,
+            Icon { class: "fa-solid fa-info" }
         }
     }
 }
