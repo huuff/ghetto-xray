@@ -50,7 +50,7 @@ pub fn EntryForm(portfolio: Signal<Portfolio>, class: Option<String>) -> Element
                 oninput: move |evt| *market_value.write() = evt.value(),
             }
             select {
-                class: "select",
+                class: "select w-32",
                 value: r#type,
                 onchange: move |evt| r#type.set(evt.value()),
                 option { value: SecurityType::Fund.to_string(), "Fund" }
