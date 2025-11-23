@@ -856,5 +856,11 @@
     "morningstar_id": "F00000OS8X",
     "name": "Storm Bond RC EUR",
     "type": "Fund"
+  },
+  {
+    "isin": "ES0140072028",
+    "morningstar_id": "F00000ZUC3",
+    "name": "Ábaco Renta Fija Mixta Global C FI",
+    "type": "Fund"
   }
 ]
