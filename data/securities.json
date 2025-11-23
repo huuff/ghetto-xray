@@ -862,5 +862,24 @@
     "morningstar_id": "F00000ZUC3",
     "name": "Ábaco Renta Fija Mixta Global C FI",
     "type": "Fund"
+  },
+  {
+    "isin": "IE000ZYRH0Q7",
+    "morningstar_id": "F000013SC0",
+    "name": "iShares Developed World Index (IE) Acc EUR clase S",
+    "type": "Fund"
+  },
+  {
+    "isin": "IE000QAZP7L2",
+    "morningstar_id": "F00001SELW",
+    "name": "iShares Emerging Markets Index Fund (IE) Acc EUR clase S",
+    "type": "Fund"
+  },
+  {
+    "isin": "IE000N4ZYX28",
+    "morningstar_id": "F00001SELW",
+    "name": "iShares US Equity Index Fund clase S",
+    "type": "Fund"
   }
+
 ]

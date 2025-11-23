@@ -17,8 +17,6 @@
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-medium: 500;
@@ -5242,9 +5240,6 @@
   .max-h-\[95dvh\] {
     max-height: 95dvh;
   }
-  .max-h-\[95vh\] {
-    max-height: 95vh;
-  }
   .max-h-\[100dvh\] {
     max-height: 100dvh;
   }
@@ -6378,10 +6373,6 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
@@ -7459,11 +7450,6 @@
   .toggle-xs {
     &:is([type="checkbox"]), &:has([type="checkbox"]) {
       --size: calc(var(--size-selector, 0.25rem) * 4);
-    }
-  }
-  .sm\:w-auto {
-    @media (width >= 40rem) {
-      width: auto;
     }
   }
   .md\:block {
