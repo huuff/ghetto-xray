@@ -4,7 +4,7 @@ use crate::{
 };
 use dioxus::prelude::*;
 use itertools::Itertools;
-use std::sync::LazyLock;
+use std::{rc::Rc, sync::LazyLock};
 
 pub static SECURITIES: LazyLock<Vec<Security>> = LazyLock::new(move || {
     serde_json::from_str(include_str!("../data/securities.json"))
@@ -27,6 +27,18 @@ pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Elemen
             .collect_vec()
     });
 
+    let mut input_elem = use_signal::<Option<Rc<MountedData>>>(|| None);
+    use_effect(move || {
+        if is_open()
+            && let Some(input_elem) = input_elem.read().clone()
+        {
+            spawn(async move {
+                dioxus_sdk_time::sleep(std::time::Duration::from_millis(100)).await;
+                input_elem.set_focus(true).await.unwrap();
+            });
+        }
+    });
+
     rsx! {
         Modal { title: "Securities", is_open,
             label { class: "input input-lg w-full mb-5",
@@ -36,6 +48,8 @@ pub fn Securities(portfolio: Signal<Portfolio>, is_open: Signal<bool>) -> Elemen
                     placeholder: "Search security name, ISIN",
                     value: search_query,
                     oninput: move |evt| *search_query.write() = evt.value(),
+                    onmount: move |elem| input_elem.set(Some(elem.data())),
+                    autofocus: true,
                 }
             }
             ul { class: "flex flex-col",
