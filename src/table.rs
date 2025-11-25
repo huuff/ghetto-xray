@@ -1,3 +1,5 @@
+use std::rc::Rc;
+
 use dioxus::prelude::*;
 
 use crate::{model::Portfolio, ui::Icon};
@@ -33,6 +35,25 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
 
     let mut set_value = move |new_val| portfolio.write().entries[index].market_value = new_val;
 
+    let mut is_editing = use_signal(|| false);
+    let mut name_input = use_signal::<Option<Rc<MountedData>>>(|| None);
+    let mut toggle_editing = move || {
+        let start_editing = !is_editing();
+        *is_editing.write() = start_editing;
+
+        if start_editing {
+            spawn(async move {
+                dioxus_sdk_time::sleep(std::time::Duration::from_millis(100)).await;
+                if let Some(name_input) = name_input() {
+                    let _ = name_input.set_focus(true).await;
+                }
+            });
+        }
+    };
+    let mut set_name = move |new_name| {
+        portfolio.write().entries[index].name = Some(new_name);
+    };
+
     rsx! {
         TableRow {
             div { class: "flex flex-row gap-2 is-align-items-center",
@@ -41,7 +62,26 @@ fn TableEntry(index: usize, portfolio: Signal<Portfolio>) -> Element {
             }
             div { class: "flex flex-row gap-2 is-align-items-center",
                 span { class: "md:hidden font-bold", "Name:" }
-                p { "{entry().name.as_deref().unwrap_or(\"Unknown\")}" }
+                Icon {
+                    class: "fa-solid fa-pencil",
+                    onclick: move |_| toggle_editing(),
+                }
+                if is_editing() {
+                    input {
+                        class: "input input-xs input-neutral w-full",
+                        onmount: move |elem| *name_input.write() = Some(elem.data()),
+                        oninput: move |evt| set_name(evt.value()),
+                        onblur: move |_| toggle_editing(),
+                        onkeypress: move |evt| {
+                            if evt.key() == Key::Enter {
+                                toggle_editing();
+                            }
+                        },
+                        value: "{entry().name.as_deref().unwrap_or(\"Unknown\")}",
+                    }
+                } else {
+                    p { "{entry().name.as_deref().unwrap_or(\"Unknown\")}" }
+                }
             }
             div { class: "flex flex-row gap-2 is-align-items-center",
                 span { class: "md:hidden font-bold", "Value:" }
