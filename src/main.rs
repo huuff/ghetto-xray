@@ -20,7 +20,7 @@ enum Route {
     Home {},
 }
 
-const FAVICON: Asset = asset!("/assets/favicon.ico");
+const FAVICON: Asset = asset!("/assets/favicon.png");
 const TAILWIND: Asset = asset!("/assets/tailwind.css");
 
 fn main() {
@@ -68,7 +68,6 @@ fn Home() -> Element {
                                 OpenSecurities { is_open: is_securities_open }
                                 OpenTutorial { is_open: is_tutorial_open }
                             }
-
                         }
                         XRayButton { portfolio }
                     }
@@ -76,6 +75,15 @@ fn Home() -> Element {
             }
             Securities { portfolio, is_open: is_securities_open }
             Tutorial { is_open: is_tutorial_open }
+
+            footer { class: "flex flex-row justify-center",
+                a {
+                    class: "text-sm underline",
+                    href: "https://www.flaticon.com/free-icons/stocks",
+                    title: "stocks icons",
+                    "Stocks icons created by Boris farias - Flaticon"
+                }
+            }
         }
     }
 }
