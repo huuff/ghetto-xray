@@ -880,6 +880,12 @@
     "morningstar_id": "FOGBR05KLX",
     "name": "Fidelity Iberia A-Acc-EUR",
     "type": "Fund"
+  },
+  {
+    "isin": "ES0107696017",
+    "morningstar_id": "F000014GIJ",
+    "name": "Cinvest Multigestión Oricalco FI",
+    "type": "Fund"
   }
 
 ]
