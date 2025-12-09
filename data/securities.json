@@ -886,6 +886,12 @@
     "morningstar_id": "F000014GIJ",
     "name": "Cinvest Multigestión Oricalco FI",
     "type": "Fund"
+  },
+  {
+    "morningstar_id": "F00001H6HD",
+    "name": "Man Funds plc - Man Euro Corporate Bond D EUR",
+    "isin": "IE000JM1MJ59",
+    "type": "Fund"
   }
 
 ]
