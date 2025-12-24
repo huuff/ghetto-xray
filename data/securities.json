@@ -892,6 +892,11 @@
     "name": "Man Funds plc - Man Euro Corporate Bond D EUR",
     "isin": "IE000JM1MJ59",
     "type": "Fund"
+  },
+  {
+    "morningstar_id": "F00000LKOY",
+    "name": "Robeco QI Emerging Markets Active Equities D",
+    "isin": "LU0565011698",
+    "type": "Fund"
   }
-
 ]
