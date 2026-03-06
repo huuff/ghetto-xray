@@ -904,5 +904,17 @@
     "name": "iShares US Index Fund (IE) S Acc EUR",
     "isin": "IE000N4ZYX28",
     "type": "Fund"
+  },
+  {
+    "isin": "LU2200514128",
+    "morningstar_id": "F000016CII",
+    "name": "Pareto Nordic Cross Credit R EUR",
+    "type": "Fund"
+  },
+  {
+    "isin": "LU1598719752",
+    "morningstar_id": "F00000YU4F",
+    "name": "Cobas International Fund P Acc EUR",
+    "type": "Fund"
   }
 ]
